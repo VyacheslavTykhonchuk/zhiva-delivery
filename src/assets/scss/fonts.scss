@@ -28,7 +28,7 @@
     font-weight: 600;
 }
 
-//
+//CoreSansG
 @font-face {
     font-family: 'CoreSansG';
     src: url("/dist/assets/fonts/CoreSansG-Medium.ttf");
@@ -38,5 +38,31 @@
 @font-face {
     font-family: 'CoreSansG';
     src: url("/dist/assets/fonts/CoreSansG-Bold.ttf");
+    font-weight: 700;
+}
+
+// Roboto
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("/dist/assets/fonts/Roboto-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("/dist/assets/fonts/Roboto-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("/dist/assets/fonts/Roboto-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("/dist/assets/fonts/Roboto-Bold.ttf");
     font-weight: 700;
 }
