@@ -1,0 +1,16 @@
+body {
+    font-family: $mainFont;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
