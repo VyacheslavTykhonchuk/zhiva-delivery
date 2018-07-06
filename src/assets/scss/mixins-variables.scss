@@ -1,13 +1,20 @@
-// Variables
+// Variables:
+// _colors
 $mainFont: "Roboto";
 $mainColor: hsl(0, 0%, 29%);
 $lightBlue: #00D1FF;
 $lightGray: hsl(0, 0%, 61%);
 $lightestGray: #C0C0C0;
 $green: #009933;
+$yellow: #ffcc33;
+$orange: #ff9933;
 
+// _font weight
+$light: 300;
 $book: normal;
+$regular: normal;
 $medium: 500;
 $demi: 600;
+$bold: 700;
 
 // Mixins

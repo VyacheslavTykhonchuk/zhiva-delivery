@@ -15,7 +15,38 @@ input {
     outline: none;
 }
 
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.transparent {
+    opacity: 0.6;
+}
+
+.icon {
+    display: flex;
+}
+
 .page-top-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background: $yellow;
+    border-top: 6px solid $orange;
+    position: relative;
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 14px;
+        height: 14px;
+    }
+
     span {
         color: $green;
     }
