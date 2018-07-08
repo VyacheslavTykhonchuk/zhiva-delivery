@@ -26,6 +26,18 @@ input {
 
 .icon {
     display: flex;
+
+    &_decoy {
+        width: 18px;
+        height: 18px;
+        background: white;
+        border-radius: 50%;
+        border: 1px solid red;
+    }
+
+    & + * {
+        margin-left: 8px;
+    }
 }
 
 .page-top-line {
