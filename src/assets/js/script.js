@@ -11,10 +11,14 @@
         init: function () {
             projectName.initSlider();
         },
-        initSlider: function name(params) {
-            console.log('initialized');
+        initSlider: function () {
             $('.sliderContainer').slick({
+                dots: true,
                 autoplay: true,
+                arrows: false,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
             });
         },
     });

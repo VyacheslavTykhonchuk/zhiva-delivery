@@ -17,8 +17,8 @@ var gulp = require('gulp'),
 // Definitions
 var source = {
     js: [
-        "src/assets/js/script.js",
-        "src/assets/js/jquery-3.3.1.min.js"
+        "src/assets/js/slick.min.js",
+        "src/assets/js/script.js"
     ]
 };
 
