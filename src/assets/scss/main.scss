@@ -73,16 +73,18 @@ input {
             display: flex;
             align-items: center;
 
-            &:hover {
-                color: $green;
-            }
-
             > * + * {
                 margin-left: 10px;
             }
         }
 
         &__text {
+            transition: all .4s;
+
+            &:hover {
+                color: $green;
+            }
+
             color: rgb(38, 38, 38);
         }
 
@@ -148,6 +150,11 @@ input {
             position: absolute;
             right: -10px;
             height: 30px;
+            align-items: center;
+            padding-bottom: 0;
+            svg {
+                opacity: .3;
+            }
         }
     }
 
@@ -180,6 +187,7 @@ input {
 
     &-bucket {
         display: flex;
+        align-items: center;
 
         > * + * {
             margin-left: 20px;

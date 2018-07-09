@@ -1,6 +1,7 @@
 .main-header {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid rgb(229, 229, 229);
 
     &__top-line {
         display: flex;
