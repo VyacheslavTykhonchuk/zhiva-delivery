@@ -3,14 +3,23 @@
 $mainFont: "Roboto";
 $secondaryFont: "RobotoSlab";
 $mainColor: hsl(0, 0%, 29%);
-$lightBlue: #00D1FF;
-$gray: #999999;
-$lightGray:hsl(0, 0%, 90%);
-$green: #009933;
+$gray: hsl(0, 0%, 60%);
+$darkGray: hsl(0, 0%, 20%);
+$lightGray: hsl(0, 0%, 90%);
+$green: hsl(140, 100%, 30%);
 $darkGreen: hsl(140, 100%, 25%);
-$yellow: #ffcc33;
-$orange: #ff9933;
-$blue: rgb(26, 145, 214);
+$yellow: hsl(45, 100%, 60%);
+$orange: hsl(30, 100%, 60%);
+$blue: hsl(202, 78%, 47%);
+
+// color: $mainColor;
+// color: $gray;
+// color: $lightGray;
+// color: $green;
+// color: $darkGreen;
+// color: $yellow;
+// color: $orange;
+// color: $blue;
 
 // _font weight
 $light: 300;
