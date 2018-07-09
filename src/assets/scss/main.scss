@@ -261,6 +261,19 @@ input {
             justify-content: space-between;
             background-repeat: no-repeat;
             background-size: cover;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+
+            &_link {
+                &:hover {
+                    border-color: $green;
+
+                    h4 {
+                        color: $green;
+                    }
+                }
+            }
 
             & + .main-home-block__item {
                 margin-top: 12px;
@@ -298,6 +311,7 @@ input {
                 font-size: 22px;
                 line-height: 1.2;
                 max-width: 55%;
+
                 h4 {
                     font-weight: normal;
                 }
@@ -313,6 +327,8 @@ input {
 
             h4 {
                 margin: 0;
+                transition: all 0.4s;
+                transform: translate3d(0, 0, 0);
             }
         }
 
@@ -320,10 +336,66 @@ input {
             font-size: 15px;
             color: rgb(18, 18, 18);
             line-height: 1.25;
+            transform: translate3d(0, 0, 0);
 
             &_white {
                 color: white;
             }
+        }
+    }
+
+    &-slider {
+        padding: 0;
+
+        &__item {
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__sale {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            .text_big {
+                font-family: $secondaryFont;
+            }
+
+            .text_small {
+                position: absolute;
+                top: 30px;
+                left: 5px;
+                font-size: 18px;
+                font-family: $secondaryFont;
+            }
+        }
+
+        &__text-wrap {
+            max-width: 40%;
+            padding-right: 5%;
+            display: flex;
+            flex-direction: column;
+
+            &_light {
+                color: white;
+            }
+
+            &_dark {
+                color: hsl(0, 0%, 7%);
+            }
+        }
+
+        &__title {
+            font-family: $secondaryFont;
+            font-weight: $regular;
+            font-size: 26px;
+            margin: 0;
         }
     }
 }
@@ -388,6 +460,83 @@ input {
         }
     }
 }
-.sale-sticker{
-    
+
+.sale-sticker {
+    background: $yellow;
+    color: $green;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 24px 0 24px;
+    font-family: "Roboto";
+
+    &__first-row {
+        font-size: 16px;
+        font-weight: $bold;
+    }
+
+    &__small-text {
+        font-size: 7px;
+        position: relative;
+        bottom: -3px;
+        right: -1px;
+    }
+
+    &__last-row {
+        font-size: 24px;
+        font-weight: $bold;
+        position: relative;
+        top: -10px;
+    }
+}
+
+.text {
+    &_small {
+        font-size: 16px;
+    }
+
+    &_big {
+        font-size: 80px;
+    }
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+    transition: all 0.4s;
+
+    > * + * {
+        margin-left: 20px;
+    }
+
+    &_big {
+        padding: 12px 20px;
+        font-weight: $bold;
+        font-size: 22px;
+    }
+
+    &_green {
+        background: $green;
+        color: white;
+    }
+
+    &_arrow {
+        svg {
+            transition: all 0.4s;
+        }
+
+        &:hover {
+            background: $darkGreen;
+
+            svg {
+                transform: translate(4px, 0);
+            }
+        }
+    }
 }

@@ -9,10 +9,13 @@
         modalWindow: $('.modal'),
 
         init: function () {
-            projectName.initHeader();
+            projectName.initSlider();
         },
-        initHeader: function name(params) {
+        initSlider: function name(params) {
             console.log('initialized');
+            $('.sliderContainer').slick({
+                autoplay: true,
+            });
         },
     });
     $(document).ready(function () {

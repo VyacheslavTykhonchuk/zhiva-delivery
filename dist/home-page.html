@@ -369,9 +369,28 @@
 <div class="wrap">
     <main class="page-main" id="main">
         <section class="main-home-block">
-            <div class="main-home-block__item main-home-block__item_wide main-home-block__item_slider"></div>
+            <div class="main-home-block__item main-home-block__item_wide main-slider sliderContainer" >
+                <div class="main-slider__item" style="background-image: url(assets/img/slide1.png)">
+                    <div class="main-slider__text-wrap main-slider__text-wrap_light">
+                        <h3 class="main-slider__title">
+                            Свежие продукты с доставкой домой
+                        </h3>
+                        <div class="main-slider__sale">
+                            <span class="text_small">до</span>
+                            <span class="text_big">-30%</span>
+                        </div>
+                        <a href="" class="btn btn_big btn_green btn_arrow">
+                            <span>Купить</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="20px">
+                                <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M-0.008,11.998 L14.853,11.998 L6.332,19.996 L12.356,19.996 L23.008,9.999 L12.356,0.003 L6.332,0.003 L14.853,8.000 L-0.008,8.000 L-0.008,11.998 Z"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="main-home-block__item_regular">
-                <div class="main-home-block__item">
+                <a class="main-home-block__item  main-home-block__item_link ">
                     <div class="main-home-block__text-wrap">
                         <div class="main-home-block__title">
                             <h4>Доставка 24/7</h4>
@@ -385,7 +404,7 @@
                     <div class="main-home-block__img-wrap">
                         <img src="assets/img/access-time.png" alt="">
                     </div>
-                </div>
+                </a>
                 <div class="main-home-block__item" style="background-image: url(assets/img/rr.png)">
                     <div class="main-home-block__text-wrap">
                         <div class="main-home-block__title main-home-block__title_white">
@@ -434,14 +453,19 @@
                 </div>
 
             </div>
-            <div class="main-home-block__item main-home-block__item_regular" style="background-image: url(assets/img/veg.png)">
+            <a class="main-home-block__item main-home-block__item_link main-home-block__item_regular" style="background-image: url(assets/img/veg.png)">
                 <div class="main-home-block__text-wrap">
                     <div class="main-home-block__title main-home-block__title_big">
                         <h4>Овощи и фрукты</h4>
                     </div>
                 </div>
-            </div>
-            <div class="main-home-block__item main-home-block__item_regular" style="background-image: url(assets/img/spaghet.png)">
+                <div class="sale-sticker">
+                    <span class="sale-sticker__first-row">Скидки</span>
+                    <span class="sale-sticker__small-text">до</span>
+                    <span class="sale-sticker__last-row">-40%</span>
+                </div>
+            </a>
+            <a class="main-home-block__item main-home-block__item_link  main-home-block__item_regular" style="background-image: url(assets/img/spaghet.png)">
                 <div class="main-home-block__text-wrap">
                     <div class="main-home-block__title main-home-block__title_big">
                         <h4>Макаронні вироби
@@ -453,7 +477,7 @@
                     <span class="sale-sticker__small-text">до</span>
                     <span class="sale-sticker__last-row">-20%</span>
                 </div>
-            </div>
+            </a>
         </section>
     </main>
 </div>
