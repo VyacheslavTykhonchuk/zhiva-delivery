@@ -21,8 +21,6 @@
                 margin-left: 8px;
             }
 
-            
-
             a {
                 color: white;
             }
@@ -35,6 +33,12 @@
             * + * {
                 margin-left: 14px;
             }
+        }
+    }
+
+    &__main-content {
+        > * + * {
+            margin-left: 35px;
         }
     }
 
@@ -51,9 +55,38 @@
         }
 
         &_text {
-            & + * {
+            > * + * {
                 margin-top: 8px;
             }
         }
+    }
+
+    &__main-content {
+        display: flex;
+        align-items: center;
+        padding: 14px 0;
+    }
+
+    &__nav {
+        > * + * {
+            margin-top: 20px;
+        }
+    }
+
+    &__bucket-socials {
+        display: flex;
+        flex-direction: column;
+
+        > * + * {
+            margin-top: 8px;
+        }
+    }
+}
+
+.link {
+    cursor: pointer;
+
+    &_green {
+        color: $green;
     }
 }
