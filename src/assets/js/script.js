@@ -83,7 +83,7 @@
                     autoplay: true,
                     arrows: true,
                     infinite: true,
-                    slidesToShow: 7,
+                    slidesToShow: 6,
                     slidesToScroll: 1,
                     prevArrow: $('.arrPrev'),
                     nextArrow: $('.arrNext'),
