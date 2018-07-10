@@ -11,6 +11,16 @@
         init() {
             projectName.initSlider();
             projectName.initQuantityItems();
+            projectName.initOpenMenu();
+        },
+        initOpenMenu() {
+            let openMenu = $('#openMenu'),
+                menu = $('#mainMenu');
+            openMenu.on('click', function (e) {
+                e.preventDefault();
+                menu.toggleClass('visible');
+            });
+
         },
         initQuantityItems() {
             openQuantity();
