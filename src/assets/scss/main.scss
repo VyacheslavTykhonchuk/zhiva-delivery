@@ -1019,3 +1019,53 @@ input {
         }
     }
 }
+
+.customers-reviews {
+    background: $green;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 0;
+
+    &__title {
+        font-size: 32px;
+    }
+
+    &__slider {
+        display: flex !important; // for slick
+
+        &-item {
+            padding: 50px 1rem;
+            max-width: 870px;
+            display: flex !important; // for slick
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-img {
+            border-radius: 50%;
+
+            & + * {
+                margin-top: 20px;
+            }
+        }
+
+        &-desc {
+            font-size: 18px;
+            font-weight: $light;
+            text-align: center;
+            line-height: 1.556;
+
+            & + * {
+                margin-top: 16px;
+            }
+        }
+
+        &-name {
+            font-size: 20px;
+            font-weight: $regular;
+            text-align: center;
+        }
+    }
+}

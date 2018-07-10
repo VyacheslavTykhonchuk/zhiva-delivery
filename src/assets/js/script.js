@@ -47,8 +47,10 @@
             }
         },
         initSlider() {
+            // call 
             plateSlider();
             homeSlide();
+            reviewSlider();
 
             function homeSlide() {
                 if (!$('.sliderContainer').length) return false;
@@ -93,6 +95,17 @@
                             }
                         },
                     ]
+                });
+            }
+            function reviewSlider() {
+                if (!$('.reviewSlider').length) return false;
+                $('.reviewSlider').slick({
+                    dots: true,
+                    autoplay: true,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 });
             }
         },
