@@ -294,6 +294,8 @@ input {
 
         &__icon {
             display: flex;
+            position: relative;
+            top: -5px;
         }
 
         &__text-wrap {
@@ -727,6 +729,12 @@ input {
     font-family: $mainFont;
     position: relative;
 
+    &__buy {
+        span {
+            white-space: nowrap;
+        }
+    }
+
     &__tag {
         background: $yellow;
         color: $green;
@@ -788,6 +796,13 @@ input {
     }
 
     &__price {
+        display: flex;
+        align-items: center;
+
+        > * + * {
+            margin-left: 5px;
+        }
+
         span {
             color: $darkGray;
 
@@ -808,6 +823,10 @@ input {
         width: 100%;
         justify-content: space-between;
         align-items: center;
+
+        span {
+            white-space: nowrap;
+        }
 
         > * + * {
             margin-left: 8px;
