@@ -615,6 +615,11 @@ input {
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
+
+    &_bg {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 .item-plate {
@@ -743,6 +748,7 @@ input {
         width: 235px;
         transition: all 0.4s;
         position: relative;
+        overflow: hidden;
 
         & + * {
             margin-left: 12px;
@@ -863,5 +869,61 @@ input {
         margin: 0;
         transform: rotate(180deg) translate(0, 50%);
         right: 0;
+    }
+}
+
+.info-block {
+    padding: 35px;
+    background: white;
+    display: flex;
+    width: calc((100% / 3) - 7px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+
+    &__title {
+        font-family: $secondaryFont;
+        font-size: 24px;
+        font-weight: $bold;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: $regular;
+    }
+
+    &__accent-text {
+        color: $green;
+    }
+
+    &__container {
+        padding: 45px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-wrap {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__img {
+        z-index: 0;
+
+        &_bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        &_right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
     }
 }
