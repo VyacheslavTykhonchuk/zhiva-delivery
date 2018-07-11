@@ -12,6 +12,20 @@
             projectName.initSlider();
             projectName.initQuantityItems();
             projectName.initOpenMenu();
+            projectName.initPageTopLine();
+        },
+        initPageTopLine() {
+            if (!$('#pageTopLine').length) return false;
+
+            let hideLine = $('#closePageTopLine'),
+                line = $('#pageTopLine');
+
+            hideLine.on('click', function () {
+                $(this).closest(line).addClass('hidden');
+                setTimeout(() => {
+                    $(this).closest(line).hide();
+                }, 400);
+            });
         },
         initOpenMenu() {
             let openMenu = $('#openMenu'),
@@ -34,13 +48,14 @@
                 add.each(function (e) {
                     $(this).on('click', function (e) {
                         e.preventDefault();
-                        $(this).siblings('.counterQuantity').stepUp(1);
+                        $(this).siblings('.counterQuantity').val(+$(this).siblings('.counterQuantity').val() + 1);
                     });
                 });
                 remove.each(function (e) {
                     $(this).on('click', function (e) {
                         e.preventDefault();
-                        $(this).siblings('.counterQuantity').stepDown(1);
+                        if (+$(this).siblings('.counterQuantity').val() < 2) return false;
+                        $(this).siblings('.counterQuantity').val(+$(this).siblings('.counterQuantity').val() - 1);
                     });
                 });
             }

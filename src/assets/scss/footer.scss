@@ -66,13 +66,10 @@
         font-size: 16px;
         font-weight: $light;
         color: $darkGray;
-        text-decoration: underline;
-        text-decoration-color: transparent;
-        transition: all 0.4s;
+        width: min-content;
+        white-space: nowrap;
 
-        &:hover {
-            text-decoration-color: $darkGray;
-        }
+        @include linkHover($gray, 1);
 
         & + * {
             margin-top: 14px;
