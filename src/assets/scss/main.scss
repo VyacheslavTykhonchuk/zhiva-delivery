@@ -789,6 +789,16 @@ input {
     font-family: $mainFont;
     position: relative;
 
+    &.wrap {
+        .custom-arrow__prev {
+            left: -45px;
+        }
+
+        .custom-arrow__next {
+            right: -33px;
+        }
+    }
+
     &__buy {
         &:hover {
             svg {
