@@ -1791,18 +1791,35 @@ input {
         align-items: center;
         border: none;
         justify-content: center;
+        transition: all 0.4s;
+        overflow: hidden;
 
         &__text {
             color: white;
             font-weight: $regular;
             font-size: 32px;
             margin-left: 28px;
+            transition: all 0.4s;
         }
 
         &__icon-cart {
             height: 45px;
             width: 45px;
+            transition: all 0.4s;
         }
-        
+
+        &:hover {
+            .btn_buy-submit__icon-cart {
+                transform: translate(63px, 0);
+            }
+
+            .btn_buy-submit__text {
+                opacity: 0;
+            }
+        }
+
+        &:active {
+            border: 1px solid white;
+        }
     }
 }

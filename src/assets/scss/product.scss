@@ -2,10 +2,15 @@
     display: flex;
 
     &__slider {
+        width: 100%;
         display: flex;
         flex-direction: column;
         width: 50%;
         align-items: center;
+    }
+
+    &__info {
+        width: 100%;
     }
 }
 
@@ -86,6 +91,14 @@
         color: #666666;
         margin-bottom: 0;
     }
+
+    .main-text-block {
+        padding: 0;
+
+        &__text {
+            margin-top: 16px;
+        }
+    }
 }
 
 .block {
@@ -98,6 +111,10 @@
         &__currency {
             font-size: 36px;
             font-weight: $regular;
+        }
+
+        & + * {
+            margin-top: 32px;
         }
     }
 
@@ -112,10 +129,52 @@
             width: 58px;
             height: 58px;
             cursor: pointer;
+
+            &:active {
+                border: 1px solid white;
+            }
         }
 
         .quantity-calc__input {
             font-size: 32px;
         }
+    }
+}
+
+.product-properties {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 30px 0;
+    border-top: 1px solid $lightGray;
+    border-bottom: 1px solid $lightGray;
+    flex-wrap: wrap;
+
+    &__wrap {
+        width: calc(50% - 5px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        align-items: baseline;
+
+        & + * {
+            margin-top: 8px;
+        }
+    }
+
+    &__prop-name {
+        font-size: 14px;
+        font-weight: $light;
+        color: #666666;
+    }
+
+    &__prop-val {
+        font-size: 14px;
+        font-weight: $regular;
+        color: $darkGray;
+        margin-left: 5px;
     }
 }
