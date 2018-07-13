@@ -88,7 +88,22 @@
             plateSlider();
             homeSlide();
             reviewSlider();
+            productSliders();
+            function productSliders() {
+                if (!$('.productSliderMain').length) return false;
+                let sMain = $('.productSliderMain'),
+                    sNav = $('.productSliderNav');
 
+                sMain.slick({
+                    dots: false,
+                    autoplay: true,
+                    arrows: false,
+                    draggable: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                });
+            }
             function homeSlide() {
                 if (!$('.sliderContainer').length) return false;
 
