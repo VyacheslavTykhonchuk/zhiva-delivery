@@ -990,6 +990,7 @@ input {
 .quantity-calc {
     min-height: 39px;
     align-items: center;
+    display: flex;
 
     &__btn {
         width: 20px;
@@ -1778,5 +1779,30 @@ input {
 .text {
     &-green {
         color: $green;
+    }
+}
+
+.btn {
+    &_buy-submit {
+        height: 58px;
+        width: 250px;
+        background: $green;
+        display: flex;
+        align-items: center;
+        border: none;
+        justify-content: center;
+
+        &__text {
+            color: white;
+            font-weight: $regular;
+            font-size: 32px;
+            margin-left: 28px;
+        }
+
+        &__icon-cart {
+            height: 45px;
+            width: 45px;
+        }
+        
     }
 }

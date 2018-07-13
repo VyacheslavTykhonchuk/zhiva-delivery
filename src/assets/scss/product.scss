@@ -1,4 +1,6 @@
 .main-product-holder {
+    display: flex;
+
     &__slider {
         display: flex;
         flex-direction: column;
@@ -13,12 +15,19 @@
 
         &__item {
             width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 
     &-nav {
+        margin-top: 16px;
         width: 100%;
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
 
@@ -32,6 +41,7 @@
             border: 1px solid $lightGray;
             cursor: pointer;
             transition: all 0.4s;
+            margin: 5px;
 
             &:hover {
                 border-color: $green;
@@ -45,6 +55,67 @@
                 width: 100%;
                 height: 100%;
             }
+        }
+    }
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+
+    &__header {
+        & + * {
+            margin-top: 16px;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: $regular;
+        margin: 0;
+
+        & + * {
+            margin-top: 16px;
+        }
+    }
+
+    &__article {
+        font-size: 14px;
+        font-weight: $light;
+        color: #666666;
+        margin-bottom: 0;
+    }
+}
+
+.block {
+    &-price {
+        &__price {
+            font-size: 54px;
+            font-weight: $regular;
+        }
+
+        &__currency {
+            font-size: 36px;
+            font-weight: $regular;
+        }
+    }
+
+    &-buy {
+        display: flex;
+
+        > * + * {
+            margin-left: 10px;
+        }
+
+        .quantity-calc__btn {
+            width: 58px;
+            height: 58px;
+            cursor: pointer;
+        }
+
+        .quantity-calc__input {
+            font-size: 32px;
         }
     }
 }

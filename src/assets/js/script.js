@@ -94,14 +94,24 @@
                 let sMain = $('.productSliderMain'),
                     sNav = $('.productSliderNav');
 
+
                 sMain.slick({
-                    dots: false,
-                    autoplay: true,
-                    arrows: false,
-                    draggable: false,
-                    infinite: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    arrows: false,
+                    fade: true,
+                    asNavFor: '.productSliderNav',
+                    draggable: false,
+                });
+                sNav.slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    asNavFor: '.productSliderMain',
+                    dots: false,
+                    centerMode: true,
+                    focusOnSelect: true,
+                    arrows: false,
+
                 });
             }
             function homeSlide() {
