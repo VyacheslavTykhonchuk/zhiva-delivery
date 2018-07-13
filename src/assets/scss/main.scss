@@ -391,6 +391,10 @@ input {
             height: 25px;
             border: 1px solid $green;
 
+            svg {
+                transform: translate3d(0, 0, 0);
+            }
+
             @include circleHover($green);
         }
     }
@@ -1449,6 +1453,7 @@ input {
                 border-right: 1px solid $darkGray;
                 border-bottom: 1px solid $darkGray;
                 transform: rotate(-45deg);
+                top: 6px;
             }
 
             &::before {
