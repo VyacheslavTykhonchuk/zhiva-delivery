@@ -361,13 +361,15 @@ input {
             font-size: 14px;
             align-items: baseline;
             justify-content: flex-end;
+
             > * + * {
                 margin-left: 4px;
             }
-            &:first-child{
-                margin-left: -10px;
 
+            &:first-child {
+                margin-left: -10px;
             }
+
             :first-child {
                 color: $green;
                 font-size: 18px;
@@ -400,7 +402,8 @@ input {
 
             @include circleHover($green);
         }
-        .main-socials{
+
+        .main-socials {
             padding-bottom: 5px;
         }
     }
@@ -1047,6 +1050,10 @@ input {
     border-right: 3px solid $lightGray;
     overflow: hidden;
     cursor: pointer;
+
+    @media (max-width: 1285px) {
+        display: none !important;
+    }
 
     &:hover {
         .custom-arrow__triangle {

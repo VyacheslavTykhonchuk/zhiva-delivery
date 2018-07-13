@@ -148,6 +148,15 @@
                                 infinite: true,
                             }
                         },
+                        
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 1,
+                                infinite: true,
+                            }
+                        },
                         {
                             breakpoint: 1025,
                             settings: {
