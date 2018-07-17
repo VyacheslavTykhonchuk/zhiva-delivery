@@ -83,8 +83,6 @@
                     allWeight.attr('data-all-weight', +wSumm);
                     allWeight.text(+wSumm);
                 });
-
-
             }
 
             function bucketPrice(allPrice) {
