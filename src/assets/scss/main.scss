@@ -778,6 +778,15 @@ input {
         font-size: 22px;
     }
 
+    &_submit {
+        border: none;
+        width: 180px;
+        height: 50px;
+        font-weight: $regular;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
     &_gray {
         background: $gray;
         color: white;
@@ -1924,6 +1933,70 @@ input {
 
         &:first-child {
             margin-top: 110px;
+        }
+    }
+}
+
+.main-form {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+
+    .link {
+        @include underlineHover($green);
+
+        font-weight: $light;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+
+        > * + * {
+            margin-left: 25px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: $light;
+        user-select: none;
+    }
+}
+
+.main-form-input {
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 3px;
+    background-color: rgb(243, 243, 243);
+    padding: 8px 14px;
+    max-width: 390px;
+    width: 100%;
+
+    &__icon {
+        margin-left: -45px !important;
+        pointer-events: none;
+
+        & + * {
+            margin-left: 45px;
+        }
+    }
+
+    & + * {
+        margin-left: 25px;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+
+        .text-green {
+            cursor: pointer;
+
+            @include underlineHover($green);
+        }
+
+        & + * {
+            margin-top: 16px;
         }
     }
 }
