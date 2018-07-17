@@ -332,7 +332,7 @@ input {
         }
     }
 
-    &-bucket {
+    &-bucket-header {
         display: flex;
         align-items: center;
 
@@ -1888,4 +1888,12 @@ input {
             border: 1px solid white;
         }
     }
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: $regular;
+    border-bottom: 1px solid $lightGray;
+    margin: 0;
+    padding: 8px 0 12px 0;
 }

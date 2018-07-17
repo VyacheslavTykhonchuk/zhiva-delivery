@@ -1,0 +1,53 @@
+.links-block {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0 0 0;
+
+        .link {
+            font-size: 14px;
+            font-weight: $light;
+            margin-bottom: 0;
+            width: max-content;
+
+            @include underlineHover($green);
+
+            & + * {
+                margin-top: 8px;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: $regular;
+        font-size: 18px;
+        margin: 0;
+        color: $darkGray;
+        display: flex;
+
+        & + * {
+            margin-top: 16px;
+        }
+    }
+
+    &__dropdown {
+        font-size: 14px;
+        font-weight: $light;
+        max-width: 65%;
+        height: 100%;
+        color: $darkGray;
+        text-decoration: none !important;
+        display: flex;
+        max-height: 0;
+        overflow: hidden;
+        line-height: 1.5;
+
+        &_opened {
+            max-height: 500px;
+            padding-bottom: 8px;
+        }
+    }
+}
