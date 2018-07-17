@@ -623,6 +623,14 @@ input {
         margin-left: 8px;
     }
 
+    &_medium {
+        font-size: 18px;
+    }
+
+    &_green {
+        color: $green;
+    }
+
     &_slab {
         font-family: "RobotoSlab";
     }
@@ -637,8 +645,12 @@ input {
 
     &_arrow {
         &:hover {
-            .link__arrow-icon {
+            .link__arrow-icon_blue, .link__arrow-icon_white {
                 transform: translate(4px, 0);
+            }
+
+            .link__arrow-icon_back {
+                transform: translate(-4px, 0) rotate(180deg);
             }
         }
     }
@@ -651,6 +663,20 @@ input {
         justify-content: center;
         align-items: center;
         transition: all 0.4s;
+
+        &_back {
+            transform: rotate(180deg);
+        }
+
+        &_green {
+            background: $green;
+
+            svg {
+                * {
+                    fill: white;
+                }
+            }
+        }
 
         &_blue {
             background: $blue;
@@ -726,6 +752,24 @@ input {
 
     > * + * {
         margin-left: 20px;
+    }
+
+    &_proceed {
+        color: white;
+        background: $green;
+        display: flex;
+        align-items: center;
+        padding: 14px 70px 14px 24px;
+        border-radius: 3px;
+
+        span {
+            font-weight: $regular;
+            font-size: 24px;
+
+            &:last-child {
+                font-size: 14px;
+            }
+        }
     }
 
     &_big {
@@ -1031,7 +1075,7 @@ input {
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
-            margin: 0; 
+            margin: 0;
         }
     }
 }
@@ -1798,6 +1842,10 @@ input {
     &-green {
         color: $green;
     }
+}
+
+.bold {
+    font-weight: $bold;
 }
 
 .btn {
