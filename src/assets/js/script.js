@@ -32,6 +32,7 @@
                     copyToClipboard($this.closest(parent).find(item));
                 });
             });
+            
             function copyToClipboard(element) {
                 var $temp = $("<input>");
                 $("body").append($temp);

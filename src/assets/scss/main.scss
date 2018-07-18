@@ -739,6 +739,12 @@ input {
     &_big {
         font-size: 80px;
     }
+
+    &-hint {
+        font-weight: $light;
+        font-size: 12px;
+        max-width: 360px;
+    }
 }
 
 .btn {
@@ -785,6 +791,10 @@ input {
         font-weight: $regular;
         font-size: 24px;
         line-height: 100%;
+
+        &_big {
+            width: 400px;
+        }
     }
 
     &_gray {
