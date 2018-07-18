@@ -2000,3 +2000,43 @@ input {
         }
     }
 }
+
+.referal-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &__item {
+        font-size: 14px;
+        font-weight: $light;
+        color: $darkGray;
+
+        span:not(.copyItem) {
+            user-select: none;
+        }
+
+        span + * {
+            margin-left: 4px;
+        }
+
+        & + * {
+            margin-top: 12px;
+        }
+    }
+}
+
+.copyIcon {
+    cursor: pointer;
+
+    &:hover {
+        fill: $darkGreen !important;
+    }
+}
+
+.section-header-title_ref {
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
