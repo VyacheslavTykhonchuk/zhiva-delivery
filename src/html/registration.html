@@ -1,4 +1,4 @@
-@@include('modules/html-head.html',{ "bodyClass": "support-page body_support_page", "pageTitle": "Support page" }) @@include('modules/header.html',{
+@@include('modules/html-head.html',{ "bodyClass": "register-page body_register_page", "pageTitle": "Register page" }) @@include('modules/header.html',{
 "headerClass": "" })
 <div class="page-wrap">
     <main class="page-main" id="main">
@@ -8,93 +8,139 @@
                 <a href="" class="breadcrumbs__item">Регистрация</a>
             </section>
         </header>
-        <section class="support__main wrap">
 
-            <h2 class="section-title">
+        <section class="register__main wrap">
+
+            <h2 class="section-title ">
                 Регистрация
             </h2>
-            <form action="login" class="main-form">
-                <h3 class="form-title">
-                    Контактные данные
-                </h3>
+            <div class="two-columns">
+                <form action="login" class="main-form">
+                    <h3 class="main-form__title">
+                        Контактные данные
+                    </h3>
 
-                <div class="main-form-input__wrap">
-                    <input type="text" placeholder="Ваше имя" name="regPhone" class="main-form-input">
-                </div>
-                <div class="main-form-input__wrap">
-                    <input type="tel" placeholder="Ваш телефон" name="regPhone" class="main-form-input">
-                </div>
-                <div class="main-form-input__wrap">
-                    <input type="tel" placeholder="Телефон партнера, который пригласил" name="refPhone" class="main-form-input">
+                    <div class="main-form-input__wrap">
+                        <input type="text" placeholder="Ваше имя" name="regPhone" class="main-form-input">
+                    </div>
+                    <div class="main-form-input__wrap">
+                        <input type="tel" placeholder="Ваш телефон" name="regPhone" class="main-form-input">
+                    </div>
+                    <div class="main-form-input__wrap">
+                        <input type="tel" placeholder="Телефон партнера, который пригласил" name="refPhone" class="main-form-input">
 
-                </div>
-                <span class="text-hint">
-                    Не обязательное для заполнения
-                </span>
-                <div class="main-form-input__wrap">
-                    <input type="password" placeholder="Пароль" name="loginPass" class="main-form-input">
-
-                    <svg class="main-form-input__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        version="1.1" id="Capa_1" x="0px" fill="#999999" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
-                        xml:space="preserve">
-                        <g>
-                            <g>
-                                <path d="M508.745,246.041c-4.574-6.257-113.557-153.206-252.748-153.206S7.818,239.784,3.249,246.035    c-4.332,5.936-4.332,13.987,0,19.923c4.569,6.257,113.557,153.206,252.748,153.206s248.174-146.95,252.748-153.201    C513.083,260.028,513.083,251.971,508.745,246.041z M255.997,385.406c-102.529,0-191.33-97.533-217.617-129.418    c26.253-31.913,114.868-129.395,217.617-129.395c102.524,0,191.319,97.516,217.617,129.418    C447.361,287.923,358.746,385.406,255.997,385.406z"
-                                />
-                            </g>
-                        </g>
-                        <g>
-                            <g>
-                                <path d="M255.997,154.725c-55.842,0-101.275,45.433-101.275,101.275s45.433,101.275,101.275,101.275    s101.275-45.433,101.275-101.275S311.839,154.725,255.997,154.725z M255.997,323.516c-37.23,0-67.516-30.287-67.516-67.516    s30.287-67.516,67.516-67.516s67.516,30.287,67.516,67.516S293.227,323.516,255.997,323.516z"
-                                />
-                            </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                    </svg>
-                    <span class="main-form__text">
-                        Нажмите
-                        <span class="text-green showPass">здесь</span>
-                        , чтобы
-                        <span class="showPassText" data-show="показать" data-hide="спрятать">показать</span>
-                        пароль
+                    </div>
+                    <span class="text-hint">
+                        Не обязательное для заполнения
                     </span>
+                    <div class="main-form-input__wrap">
+                        <input type="password" placeholder="Пароль" name="loginPass" class="main-form-input">
+
+                        <svg class="main-form-input__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" id="Capa_1" x="0px" fill="#999999" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+                            xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M508.745,246.041c-4.574-6.257-113.557-153.206-252.748-153.206S7.818,239.784,3.249,246.035    c-4.332,5.936-4.332,13.987,0,19.923c4.569,6.257,113.557,153.206,252.748,153.206s248.174-146.95,252.748-153.201    C513.083,260.028,513.083,251.971,508.745,246.041z M255.997,385.406c-102.529,0-191.33-97.533-217.617-129.418    c26.253-31.913,114.868-129.395,217.617-129.395c102.524,0,191.319,97.516,217.617,129.418    C447.361,287.923,358.746,385.406,255.997,385.406z"
+                                    />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path d="M255.997,154.725c-55.842,0-101.275,45.433-101.275,101.275s45.433,101.275,101.275,101.275    s101.275-45.433,101.275-101.275S311.839,154.725,255.997,154.725z M255.997,323.516c-37.23,0-67.516-30.287-67.516-67.516    s30.287-67.516,67.516-67.516s67.516,30.287,67.516,67.516S293.227,323.516,255.997,323.516z"
+                                    />
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg>
+                        <span class="main-form__text">
+                            Нажмите
+                            <span class="text-green showPass">здесь</span>
+                            , чтобы
+                            <span class="showPassText" data-show="показать" data-hide="спрятать">показать</span>
+                            пароль
+                        </span>
+                    </div>
+                    <span class="text-hint">
+                        Пароль должен быть не менее 6 символов, содержать цифры и заглавные буквы и не должен совпадать с именем и эл.почтой
+                    </span>
+                    <footer class="main-form__footer">
+                        <div class="checkbox-block">
+                            <div class="custom-checkbox">
+                                <input class="custom-checkbox__checkbox" type="checkbox" name="accept">
+                                <label class="custom-checkbox__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13px" height="14px">
+                                        <path fill-rule="evenodd" fill="rgb(0, 158, 62)" d="M3.635,6.452 L5.398,10.226 C5.398,10.226 8.263,2.556 12.780,-0.000 C12.669,1.826 12.229,3.409 13.000,5.356 C11.017,5.843 6.941,11.322 5.619,14.000 C3.746,11.443 1.542,9.495 -0.000,8.887 L3.635,6.452 Z"
+                                        />
+                                    </svg>
+                                </label>
+                            </div>
+                            <span class="checkbox-block__text">
+                                Реєструючись, ви погоджуєтеся з призначеною для користувача
+                                <a href="" class="link link_green">угодою</a>
+                            </span>
+                        </div>
+                        <input type="submit" class=" btn_green btn btn_submit btn_submit_big" value="Заказ подтверждаю">
+                    </footer>
+                </form>
+                <div class="reg-hint">
+                    <header class="reg-hint__title">
+                        Покупать и зарабатывать с Жива - просто!
+                    </header>
+                    <div class="reg-hint__content">
+                        <img class="reg-hint__bg" src="/dist/assets/img/regibg.png" alt="">
+                        <img class="reg-hint__arr" src="/dist/assets/img/regarrows.png" alt="">
+                        <div class="reg-hint__item reg-hint__item_top">
+                            <img class="reg-hint__img" src="assets/img/reg-bag.png" alt="">
+                            <span class="reg-hint__text">Виберіть продукти в каталозі </span>
+                        </div>
+                        <div class="reg-hint__item reg-hint__item_left">
+                            <img class="reg-hint__img" src="assets/img/reg-cash.png" alt="">
+                            <span class="reg-hint__text">Получайте
+                                <span class="text-green">5%</span> від суми їх замовлень и доходов </span>
+                        </div>
+                        <div class="reg-hint__item reg-hint__item_right">
+                            <img class="reg-hint__img" src="assets/img/reg-check.png" alt="">
+                            <span class="reg-hint__text">
+                                Зареєструйтеся, щоб завершити оформлення замовлення. </span>
+                        </div>
+                        <div class="reg-hint__item reg-hint__item_bottom">
+                            <img class="reg-hint__img" src="assets/img/reg-ref.png" alt="">
+                            <span class="reg-hint__text">Запрошуйте за своїм посиланням друзів та знайомих </span>
+                        </div>
+                    </div>
                 </div>
-                <span class="text-hint">
-                    Пароль должен быть не менее 6 символов, содержать цифры и заглавные буквы и не должен совпадать с именем и эл.почтой
-                </span>
-                <footer class="main-form__footer">
-                    <input type="submit" class=" btn_green btn btn_submit btn_submit_big" value="Заказ подтверждаю">
-                </footer>
-            </form>
+            </div>
+
         </section>
     </main>
 </div>
