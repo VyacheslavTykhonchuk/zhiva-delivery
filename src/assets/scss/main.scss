@@ -622,7 +622,9 @@ input {
     > * + * {
         margin-left: 8px;
     }
-
+    &-career{
+        margin-top: 30px;
+    }
     &_medium {
         font-size: 18px;
     }
@@ -779,6 +781,14 @@ input {
 
     > * + * {
         margin-left: 20px;
+    }
+
+    &_font {
+        &-regular {
+            span {
+                font-weight: $regular;
+            }
+        }
     }
 
     &_proceed {
@@ -2145,7 +2155,7 @@ input {
     justify-content: space-between;
 
     > * {
-        width: calc(100% / 2);
+        width: calc((100% / 2) - 15px);
     }
 }
 
@@ -2371,6 +2381,124 @@ input {
 
         .link {
             display: inline;
+        }
+    }
+}
+
+.balance {
+    padding-top: 45px;
+
+    &__heading {
+        margin: 0;
+        font: {
+            size: 22px;
+            weight: $regular;
+        };
+
+        & + * {
+            margin-top: 12px;
+        }
+    }
+
+    &__val {
+        display: flex;
+        align-items: baseline;
+
+        & + * {
+            margin-top: 12px;
+        }
+    }
+
+    &__num {
+        font: {
+            size: 36px;
+            weight: $regular;
+        };
+
+        & + * {
+            margin-left: .4rem;
+        }
+    }
+
+    &__cur {
+        font: {
+            size: 24px;
+            weight: $regular;
+        };
+    }
+}
+
+.main-table {
+    width: 100%;
+    box-sizing: border-box;
+    border-collapse: collapse;
+
+    &_shrinked {
+        max-width: 400px;
+    }
+
+    &_mt {
+        margin-top: 120px;
+
+        &_align {
+            margin-top: 62px;
+        }
+
+        &_medium {
+            margin-top: 45px;
+        }
+    }
+
+    &__heading {
+        text-align: left;
+        margin-bottom: 22px;
+        font: {
+            size: 22px;
+            weight: $regular;
+        };
+    }
+
+    &__row {
+        border: {
+            top: 1px solid $lightGray;
+            bottom: 1px solid $lightGray;
+        };
+
+        &:nth-child(even) {
+            background: hsl(0, 0%, 95%);
+        }
+
+        &_head {
+            border: {
+                top: 1px solid $lightGray;
+                bottom: 1px solid $lightGray;
+            };
+        }
+    }
+
+    &__cell {
+        padding: 14px;
+        font: {
+            size: 18px;
+            weight: $regular;
+        };
+
+        &_bold {
+            font-weight: $bold;
+        }
+
+        &_head {
+            text-align: left;
+            font: {
+                size: 18px;
+                weight: $bold;
+            };
+        }
+    }
+
+    &_full-white {
+        .main-table__row {
+            background: white;
         }
     }
 }

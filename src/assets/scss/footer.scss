@@ -2,6 +2,14 @@
     display: flex;
     flex-direction: column;
 
+    &_border-top {
+        margin-top: 95px;
+        .main-footer-top {
+            border-top: 1px solid $lightGray;
+
+        }
+    }
+
     &__bottom {
         border-top: 1px solid $lightGray;
         padding: 25px 0 70px 0;
