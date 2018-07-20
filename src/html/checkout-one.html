@@ -1,0 +1,92 @@
+@@include('modules/html-head.html',{ "bodyClass": "check-out-one-page body_check-out-one_page", "pageTitle": "Check out page"
+}) @@include('modules/header.html',{ "headerClass": "" })
+<div class="page-wrap">
+    <main class="page-main" id="main">
+        <header class="section-header wrap">
+            <section class="breadcrumbs breadcrumbs_padding">
+                <a href="" class="breadcrumbs__item">Главная</a>
+                <a href="" class="breadcrumbs__item">Оформление заказа</a>
+            </section>
+        </header>
+        <section class="wrap">
+            <h2 class="section-title">
+                Оформление заказа
+            </h2>
+            <section class="two-blocks">
+                <div class="two-blocks__item">
+                    <div class="contact-info">
+                        <h4 class="contact-info__heading">
+                            Контактные данные
+                        </h4>
+                        <div class="contact-info__holder">
+                            <div class="contact-info__item">Я новый покупатель</div>
+                            <div class="contact-info__item contact-info__item_active">Я партнер</div>
+                        </div>
+                    </div>
+                    <div class="location-block">
+                        <span class="location-block__text"> Здравствуйте, Иванов Иван Иванович</span>
+                        <div class="selector-custom">
+                            <div data-location="false" class="selector-custom__choosen openCustomSelect">
+                                <span> Выберите адрес доставки</span>
+                                <div class="selector-custom__arr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two-blocks__item">
+                    <div class="bucket-result__header checkout-price">
+                        <div class="bucket-result__title">
+                            <span>
+                                В корзине
+                                <span class="text-green">12 </span>
+                                товаров
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="bucket-result__header  checkout-price">
+                        <div class="bucket-result__info">
+                            <span>
+                                Сумма заказа:
+                            </span>
+                            <span class="cash">
+                                <span class="cash__num">2580,50</span>
+                                <span class="cash__curr">грн</span>
+                            </span>
+                        </div>
+                        <div class="bucket-result__info">
+                            <span>
+                                Доставка:
+                            </span>
+                            <span>
+                                безкоштовно
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="bucket-result__header  checkout-price">
+                        <div class="bucket-result__info no-mt">
+                            <span>
+                                Доступно бонусов:
+                            </span>
+                            <span class="cash">
+                                <span class="cash">
+                                    <span class="cash__num"> 720,50 </span>
+                                    <span class="cash__curr"> грн.</span>
+                                </span>
+                            </span>
+
+                        </div>
+                        <form action="" class="common-input-wrap">
+                            <input type="text" class="common-input">
+                            <input type="submit" class="btn_green btn" value="Применить">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+</div>
+
+@@include('modules/html-footer.html')
