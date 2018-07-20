@@ -735,6 +735,22 @@ input {
     font-size: 18px;
     font-weight: $light;
 
+    &-small {
+        display: inline;
+
+        &_mt {
+            margin-top: 2em;
+        }
+
+        * {
+            display: inline;
+        }
+
+        font: {
+            size: 14px;
+        };
+    }
+
     &_small {
         font-size: 16px;
     }
@@ -2271,7 +2287,37 @@ input {
 }
 
 .main-list {
-    padding-left: 1em;
+    &_bullet {
+        padding-left: 1rem;
+    }
+
+    &_dashed {
+        list-style: none inside;
+        padding-left: 2rem;
+        margin-top: .5rem;
+
+        .main-list__item {
+            & + * {
+                margin-top: 4px;
+            }
+
+            &::before {
+                content: '-';
+            }
+        }
+    }
+
+    &__heading {
+        margin: 0;
+        font: {
+            size: 14px;
+            weight: $bold;
+        };
+
+        & + * {
+            margin-top: 4px;
+        }
+    }
 
     &__item {
         font-size: 14px;
