@@ -1924,6 +1924,13 @@ input {
     &_no-border {
         border: none;
     }
+
+    &_medium {
+        font-size: 22px;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 32px;
+    }
 }
 
 .info-header {
@@ -2260,5 +2267,64 @@ input {
         font-weight: $light;
         line-height: 1.5;
         max-width: 715px;
+    }
+}
+
+.main-list {
+    padding-left: 1em;
+
+    &__item {
+        font-size: 14px;
+        font-weight: $light;
+
+        & + * {
+            margin-top: 12px;
+        }
+    }
+}
+
+.main-aside-columns {
+    display: flex;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% * (2/3));
+    }
+
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% * (1/3));
+    }
+}
+
+.img-w-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    padding-top: 50px;
+
+    &__img {
+        object-fit: contain;
+        width: 250px;
+
+        & + * {
+            margin-top: 16px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: $light;
+
+        & + * {
+            margin-top: 8px;
+        }
+
+        .link {
+            display: inline;
+        }
     }
 }
