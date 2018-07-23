@@ -109,7 +109,6 @@
             copy.each(function () {
                 let $this = $(this);
                 $this.on('click', function () {
-                    console.log('copied');
                     copyToClipboard($this.closest(parent).find(item));
                 });
             });

@@ -985,7 +985,7 @@
         <section class=" wrap">
             <header class="section-header-title section-header-title_ref">
                 <div class="section-title">
-                    Профайл
+                    Личный кабинет
                     <div class="referal-block">
                         <div class="referal-block__item">
                             <span> Ваш реферальний код:</span>
@@ -1081,142 +1081,96 @@
             </header>
             <div class="two-columns">
                 <div class="two-columns__item">
-                    <div class="profile-info">
-                        <h4 class="profile-info__heading">
-                            Личные данные
+                    <div class="balance">
+                        <h4 class="balance__heading">
+                            Ваш баланс
                         </h4>
-                        <div class="profile-info__content">
-                            <div class="profile-info__item profile-info__item_left">
-                                <div class="profile-info__text"> Фамилия и имя</div>
-                                <div class="profile-info__text"> Электронная почтa</div>
-                                <div class="profile-info__text"> Телефон</div>
-                            </div>
-                            <div class="profile-info__item profile-info__item_right">
-                                <div class="profile-info__text"> Алексей Пашин</div>
-                                <div class="profile-info__text"> alexey.pashin@gmail.com</div>
-                                <div class="profile-info__text"> +380 (50) 633-12-17 </div>
-                            </div>
+                        <div class="balance__val">
+                            <span class="balance__num">1556,50</span>
+                            <span class="balance__cur">грн</span>
                         </div>
-
-                        <footer class="profile-info__footer">
-                            <a href="" class="link link_green">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-prefix="fas" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18"
-                                    role="img" viewBox="0 0 576 512" style="&#10;    width: 18px;&#10;    height: 18px;&#10;">
-                                    <path fill="#000" d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
-                                    />
-                                </svg>
-
-                                Редактировать
-                            </a>
-                            <a href="" class="link link_green">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock fa-w-14"
-                                    role="img" viewBox="0 0 448 512" style="&#10;    width: 18px;&#10;    height: 18px;&#10;">
-                                    <path fill="#000" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"
-                                    />
-                                </svg>
-                                Изменить пароль
-                            </a>
-                        </footer>
+                        <a href="" class="btn btn_font-regular btn_big btn_green btn_arrow" tabindex="-1">
+                            <span>Перевести</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="20px">
+                                <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M-0.008,11.998 L14.853,11.998 L6.332,19.996 L12.356,19.996 L23.008,9.999 L12.356,0.003 L6.332,0.003 L14.853,8.000 L-0.008,8.000 L-0.008,11.998 Z"></path>
+                            </svg>
+                        </a>
                     </div>
+                    <table class="main-table main-table_mt">
+                        <caption class="main-table__heading">Последние счета</caption>
+                        <tr class="main-table__row main-table__row_head">
+                            <th class="main-table__cell main-table__cell_head">
+                                <span>Дата</span>
+                            </th>
+                            <th class="main-table__cell main-table__cell_head">Сума, грн</th>
+                            <th class="main-table__cell main-table__cell_head">Статус</th>
+                        </tr>
+                        <tr>
+                            <td class="main-table__cell">Счетов пока нет</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="two-columns__item">
-                    <div class="profile-info">
-                        <h4 class="profile-info__heading">
-                            Адреса доставок
-                        </h4>
-                        <div class="profile-info__content">
-                            <div class="profile-info__item profile-info__item_left">
-                                <div class="profile-info__text"> г. Ивано-Франковск, ул. Ивана Франка, 25а, кв. 00</div>
-                                <div class="profile-info__text"> Подъезд:
-                                    <span class="bold">5</span>
-                                </div>
-                                <div class="profile-info__text"> Код на подъезде:
-                                    <span class="bold">8873</span>
-                                </div>
-                            </div>
+                    <table class="main-table main-table_shrinked main-table_mt_medium main-table_full-white">
+                        <caption class="main-table__heading">Текущая статистика</caption>
+                        <tr class="main-table__row">
+                            <td class="main-table__cell">Всього бонусів</td>
+                            <td class="main-table__cell main-table__cell_bold">881</td>
+                        </tr>
+                        <tr class="main-table__row">
+                            <td class="main-table__cell">Загальний обіг</td>
+                            <td class="main-table__cell main-table__cell_bold">1556,50 грн</td>
+                        </tr>
+                        <tr class="main-table__row">
+                            <td class="main-table__cell">До наступного рівня</td>
+                            <td class="main-table__cell main-table__cell_bold">8443,50 грн</td>
+                        </tr>
+                    </table>
+                    <table class="main-table main-table_mt_align ">
+                        <caption class="main-table__heading">Последние счета</caption>
+                        <tr class="main-table__row main-table__row_head">
+                            <th class="main-table__cell main-table__cell_head">
+                                <span>Дата</span>
+                            </th>
+                            <th class="main-table__cell main-table__cell_head">Сума, грн</th>
+                            <th class="main-table__cell main-table__cell_head">Статус</th>
+                            <th class="main-table__cell main-table__cell_head">Куди/Від</th>
+                        </tr>
+                        <tr class="main-table__row">
+                            <td class="main-table__cell">12/03/2018</td>
+                            <td class="main-table__cell">1000.00</td>
+                            <td class="main-table__cell">Сплачено</td>
+                            <td class="main-table__cell">+38 (099) 910-70-32</td>
+                        </tr>
+                        <tr class="main-table__row">
+                            <td class="main-table__cell">12/03/2018</td>
+                            <td class="main-table__cell">1500.00</td>
+                            <td class="main-table__cell">Сплачено</td>
+                            <td class="main-table__cell">+38 (099) 910-70-32</td>
+                        </tr>
+                        <tr class="main-table__row">
+                            <td class="main-table__cell">12/03/2018</td>
+                            <td class="main-table__cell">980.00</td>
+                            <td class="main-table__cell">В черзі</td>
+                            <td class="main-table__cell">+38 (099) 910-70-32</td>
+                        </tr>
+                        <tr class="main-table__row">
+                            <td class="main-table__cell">12/03/2018</td>
+                            <td class="main-table__cell">50000.00</td>
+                            <td class="main-table__cell">Сплачено</td>
+                            <td class="main-table__cell">+38 (099) 910-70-32</td>
+                        </tr>
+                    </table>
+                    <a href="" class="link link_green link_medium link_arrow link-career">
+                        <span>Просмотреть все транзакции</span>
+                        <div class="link__arrow-icon link__arrow-icon_green">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="12px">
+                                <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M0.126,7.016 L7.711,7.016 L3.362,11.084 L6.437,11.084 L11.873,5.999 L6.437,0.915 L3.362,0.915 L7.711,4.983 L0.126,4.983 L0.126,7.016 Z"></path>
+                            </svg>
                         </div>
-
-                        <footer class="profile-info__footer">
-                            <a href="" class="link link_green">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-prefix="fas" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18"
-                                    role="img" viewBox="0 0 576 512" style="&#10;    width: 18px;&#10;    height: 18px;&#10;">
-                                    <path fill="#000" d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
-                                    />
-                                </svg>
-                                Редактировать
-                            </a>
-                            <a href="" class="link link_green">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-prefix="fas" data-icon="plus-circle" class="svg-inline--fa fa-plus-circle fa-w-16"
-                                    role="img" viewBox="0 0 512 512" style="&#10;    width: 18px;&#10;    height: 18px;&#10;    transform: rotate(45deg);&#10;">
-                                    <path fill="#000" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
-                                    />
-                                </svg>
-                                Удалить
-                            </a>
-                        </footer>
-                    </div>
-                    <div class="profile-info">
-
-                        <div class="profile-info__content">
-                            <div class="profile-info__item profile-info__item_left">
-                                <div class="profile-info__text"> г. Ивано-Франковск, ул. Ивана Франка, 25а, кв. 00</div>
-                                <div class="profile-info__text"> Подъезд:
-                                    <span class="bold">5</span>
-                                </div>
-                                <div class="profile-info__text"> Код на подъезде:
-                                    <span class="bold">8873</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <footer class="profile-info__footer">
-                            <a href="" class="link link_green">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-prefix="fas" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18"
-                                    role="img" viewBox="0 0 576 512" style="&#10;    width: 18px;&#10;    height: 18px;&#10;">
-                                    <path fill="#000" d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
-                                    />
-                                </svg>
-
-                                Редактировать
-                            </a>
-                            <a href="" class="link link_green">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-prefix="fas" data-icon="plus-circle" class="svg-inline--fa fa-plus-circle fa-w-16"
-                                    role="img" viewBox="0 0 512 512" style="&#10;    width: 18px;&#10;    height: 18px;&#10;    transform: rotate(45deg);&#10;">
-                                    <path fill="#000" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
-                                    />
-                                </svg>
-                                Удалить
-                            </a>
-                            <a href="" class="link link_green">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-prefix="fas" data-icon="plus-circle" class="svg-inline--fa fa-plus-circle fa-w-16"
-                                    role="img" viewBox="0 0 512 512" style="&#10;    width: 18px;&#10;    height: 18px;&#10;  ">
-                                    <path fill="#000" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
-                                    />
-                                </svg>
-                                Добавить адрес
-                            </a>
-                        </footer>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <footer class="profile-footer">
-                <h4 class="profile-info__heading">
-                    Дополнительные настройки
-                </h4>
-                <div class="checkbox-block">
-                    <div class="custom-checkbox">
-                        <input class="custom-checkbox__checkbox" checked="" type="checkbox" name="accept">
-                        <label class="custom-checkbox__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13px" height="14px">
-                                <path fill-rule="evenodd" fill="rgb(0, 158, 62)" d="M3.635,6.452 L5.398,10.226 C5.398,10.226 8.263,2.556 12.780,-0.000 C12.669,1.826 12.229,3.409 13.000,5.356 C11.017,5.843 6.941,11.322 5.619,14.000 C3.746,11.443 1.542,9.495 -0.000,8.887 L3.635,6.452 Z"></path>
-                            </svg>
-                        </label>
-                    </div>
-                    <span class="checkbox-block__text">
-                        Відмовитися від смс розсилки
-                    </span>
-                </div>
-            </footer>
         </section>
     </main>
 </div>
