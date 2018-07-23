@@ -619,6 +619,14 @@ input {
     align-items: center;
     transition: all 0.4s;
 
+    &_inline {
+        display: inline;
+    }
+
+    &_gray {
+        color: $darkGray;
+    }
+
     > * + * {
         margin-left: 8px;
     }
@@ -2374,6 +2382,30 @@ input {
     align-self: flex-start;
     padding-top: 50px;
 
+    &_contact {
+        .img-w-text__img {
+            border: 10px solid $green;
+            border-radius: 50%;
+            object-fit: cover;
+            width: 380px;
+            height: 380px;
+        }
+
+        .img-w-text__text {
+            margin-top: 12px;
+            max-width: 340px;
+            line-height: 1.75;
+        }
+    }
+
+    &__img-border {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 10px solid hsl(143, 95%, 39%);
+    }
+
     &__img {
         object-fit: contain;
         width: 250px;
@@ -2822,4 +2854,73 @@ input {
 .inactive {
     opacity: .5;
     pointer-events: none;
+}
+
+.falseDisplay {
+    display: none;
+}
+
+.text-blocks {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 75px;
+
+    &__item {
+        width: calc((100% / 2) - 50px);
+
+        & + * {
+            margin-left: 60px;
+        }
+    }
+}
+
+.text-block {
+    &__heading {
+        margin: 0;
+        color: $darkGray;
+        font: {
+            size: 22px;
+            weight: $regular;
+        };
+    }
+
+    &__item {
+        width: max-content;
+        font: {
+            size: 20px;
+            weight: $light;
+        };
+    }
+
+    > * + * {
+        margin-top: 12px;
+    }
+}
+
+#map {
+    height: 300px;
+    width: 600px;
+    margin-top: 22px;
+}
+
+.invoice-item {
+    .bucket-result__header {
+        text-align: left;
+    }
+
+    .bucket-result__content {
+        align-items: flex-start;
+    }
+}
+
+.invoice-status {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    &_success {
+        background: #dadada;
+    }
 }

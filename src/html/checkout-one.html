@@ -19,11 +19,11 @@
                             Контактные данные
                         </h4>
                         <div class="contact-info__holder">
-                            <div class="contact-info__item">Я новый покупатель</div>
-                            <div class="contact-info__item contact-info__item_active">Я партнер</div>
+                            <div class="contact-info__item" id="newCustomerCheckout">Я новый покупатель</div>
+                            <div class="contact-info__item  contact-info__item_active" id="partherCheckout">Я партнер</div>
                         </div>
                     </div>
-                    <div class="location-block location-block_mt">
+                    <div class="location-block location-block_mt " id="partnerCheckout">
                         <span class="location-block__text"> Здравствуйте, Иванов Иван Иванович</span>
 
                         <div data-selected-val="Сьогодні, Пт 01.06.2018" class="select-custom openCustomSelect">
@@ -38,6 +38,28 @@
                             </div>
                         </div>
                     </div>
+                    <form action="register" id="newUserCheckout" class="main-form falseDisplay">
+                        <div class="main-form-input__wrap">
+                            <input type="text" placeholder="Ваше имя" name="regPhone" class="main-form-input">
+                        </div>
+                        <div class="main-form-input__wrap">
+                            <input type="tel" placeholder="Ваш телефон" name="regPhone" class="main-form-input">
+                        </div>
+                        <div class="main-form-input__wrap">
+                            <input type="tel" placeholder="Телефон партнера, который пригласил" name="refPhone" class="main-form-input">
+
+                        </div>
+                        <span class="text-hint">
+                            Не обязательное для заполнения
+                        </span>
+                        <div class="main-form-input__wrap">
+                            <input type="password" placeholder="Пароль" name="loginPass" class="main-form-input">
+                        </div>
+                        <span class="text-hint">
+                            Пароль должен быть не менее 6 символов, содержать цифры и заглавные буквы и не должен совпадать с именем и эл.почтой
+                        </span>
+
+                    </form>
                 </div>
                 <div class="two-blocks__item">
                     <div class="bucket-result__header checkout-price">
@@ -56,7 +78,7 @@
                                 Сумма заказа:
                             </span>
                             <span class="cash">
-                                <span class="cash__num">2580,50</span>
+                                <span data-checkout-summ="2580.5" class="cash__num checkoutSumm">2580.5</span>
                                 <span class="cash__curr">грн</span>
                             </span>
                         </div>
@@ -71,20 +93,20 @@
 
                     </div>
                     <div class="bucket-result__header  checkout-price">
-                        <div class="bucket-result__info no-mt">
+                        <div class="bucket-result__info no-mt bonusBlock">
                             <span>
                                 Доступно бонусов:
                             </span>
                             <span class="cash">
                                 <span class="cash">
-                                    <span class="cash__num"> 720,50 </span>
+                                    <span data-bonus-summ="720.5" class="cash__num bonusSumm"> 720.5 </span>
                                     <span class="cash__curr"> грн.</span>
                                 </span>
                             </span>
                         </div>
-                        <form action="" class="common-input-wrap common-input-wrap_mt">
-                            <input type="text" class="common-input" placeholder="Списать бонусами">
-                            <input type="submit" class="btn_green btn" value="Применить">
+                        <form action="" class="common-input-wrap common-input-wrap_mt bonusBlock">
+                            <input type="number" class="common-input bonusInput" min="0" placeholder="Списать бонусами">
+                            <input type="submit" class="btn_green btn bonusSubmit" value="Применить">
                         </form>
                         <form action="" class="common-input-wrap">
                             <input type="text" class="common-input" placeholder="Введите промокод">
@@ -94,7 +116,7 @@
                     <div class="bucket-result__header checkout-price">
                         <div class="bucket-result__info no-mt bucket-result__info_items-end">
                             <span class="cash cash_large">
-                                <span class="cash__num"> 2580,50 </span>
+                                <span class="cash__num checkoutSumm" data-checkout-summ="2580.5"> 2580.5 </span>
                                 <span class="cash__curr"> грн.</span>
                             </span>
                         </div>
@@ -104,9 +126,9 @@
             <form class="two-blocks ">
                 <div class="two-blocks__item ">
                     <h4 class="heading newAdressForm inactive">Адрес доставки</h4>
-                    <input type="text" class="common-input newAdressForm inactive" placeholder="Улица, дом и квартира" name="" id="">
-                    <input type="text" class="common-input newAdressForm inactive" placeholder="Подъезд, этаж,  код домофона " name="" id="">
-                    <textarea name="" id="" class="common-input common-input_ta newAdressForm inactive" placeholder="Комментарии" cols="30" rows="6"></textarea>
+                    <input type="text" class="common-input newAdressForm inactive" placeholder="Улица, дом и квартира" name="">
+                    <input type="text" class="common-input newAdressForm inactive" placeholder="Подъезд, этаж,  код домофона " name="">
+                    <textarea name="" class="common-input common-input_ta newAdressForm inactive" placeholder="Комментарии" cols="30" rows="6"></textarea>
                     <footer class="main-form__footer">
                         <div class="checkbox-block">
                             <div class="custom-checkbox">

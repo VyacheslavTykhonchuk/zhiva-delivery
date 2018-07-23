@@ -18,6 +18,87 @@
             zhiva.initLinkInfoBlock();
             zhiva.initShowPass();
             zhiva.initCopyRef();
+            zhiva.initCheckoutUserChange();
+            zhiva.activeNewAddress();
+            zhiva.activeCheckoutBonuses();
+            zhiva.initBonusesVisibility();
+        },
+        initBonusesVisibility(status) {
+            let block = $('.bonusBlock');
+
+            if (status) {
+                block.hide();
+            } else {
+                block.show();
+            }
+        },
+
+        activeCheckoutBonuses() {
+            let input = $('.bonusInput'),
+                submit = $('.bonusSubmit'),
+                bonusSumm = $('.bonusSumm'),
+                checkoutSumm = $('.checkoutSumm');
+
+            submit.on('click', function (e) {
+                e.preventDefault();
+                let bonuses = input.val(),
+                    checkoutData = checkoutSumm.attr('data-checkout-summ'),
+                    bonusData = bonusSumm.attr('data-bonus-summ'),
+                    newBonuses,
+                    newCheckout;
+
+                if (bonuses <= 0 || bonuses > +bonusData) {
+                    alert('Помилка! Ви не можете зписати 0 бонусів та сума списання не може перевищувати число доступних бонусів');
+                    return false;
+                }
+
+                newBonuses = +bonusData - +bonuses;
+                newCheckout = +checkoutData - +bonuses;
+
+                bonusSumm.attr('data-bonus-summ', newBonuses);
+                refreshData(bonusSumm);
+                checkoutSumm.attr('data-checkout-summ', newCheckout);
+                refreshData(checkoutSumm);
+
+            });
+            function refreshData(el) {
+                let dataObj = el.attr('data-checkout-summ') ? el.attr('data-checkout-summ') : el.attr('data-bonus-summ');
+
+                el.text(dataObj);
+            }
+        },
+        initCheckoutUserChange() {
+            let partherCheckout = $('#partherCheckout'),
+                newCustomerCheckout = $('#newCustomerCheckout'),
+                newUserCheckoutForm = $('#newUserCheckout'),
+                partnerCheckoutForm = $('#partnerCheckout');
+
+            partherCheckout.on('click', function () {
+                changeCheckoutUser('partner');
+                $(this).addClass('contact-info__item_active');
+                $(this).siblings().removeClass('contact-info__item_active');
+                zhiva.initBonusesVisibility(false);
+            });
+
+            newCustomerCheckout.on('click', function () {
+                changeCheckoutUser('newUser');
+                $(this).addClass('contact-info__item_active');
+                $(this).siblings().removeClass('contact-info__item_active');
+                zhiva.initBonusesVisibility(true);
+
+            });
+
+            function changeCheckoutUser(userType) {
+                if (userType === 'partner') {
+                    newUserCheckoutForm.addClass('falseDisplay');
+                    partnerCheckoutForm.removeClass('falseDisplay');
+                    zhiva.activeNewAddress(false);
+                } else if (userType === 'newUser') {
+                    newUserCheckoutForm.removeClass('falseDisplay');
+                    partnerCheckoutForm.addClass('falseDisplay');
+                    zhiva.activeNewAddress(true);
+                }
+            }
         },
         initCopyRef() {
             if (!$('.copyItem').length) return false;
@@ -187,9 +268,9 @@
                         chooseItem($(this), reinitText);
 
                         if ($(this).attr('id') === 'newAdress') {
-                            activeNewAddress(true);
+                            zhiva.activeNewAddress(true);
                         } else {
-                            activeNewAddress(false);
+                            zhiva.activeNewAddress(false);
                         }
 
                         function chooseItem($this, callback) {
@@ -205,6 +286,7 @@
 
                 function removeClass(callback, $this) {
                     select.each(function () {
+                        if ($(this).hasClass('active') && $this.hasClass('active')) return true;
                         $(this).removeClass('active');
                         $(this).find('.customSelectDropdown').removeClass('select-custom__dropdown_visible');
                     });
@@ -216,19 +298,19 @@
                     $this.find('.customSelectDropdown').toggleClass('select-custom__dropdown_visible');
                 }
 
-                function activeNewAddress(active) {
-                    let makeActive = $('.newAdressForm');
-                    makeActive.each(function () {
-                        if (active) {
-                            $(this).removeClass('inactive');
-                        } else {
-                            $(this).addClass('inactive');
-                        }
-                    });
-                }
+
             }
         },
-
+        activeNewAddress(active) {
+            let makeActive = $('.newAdressForm');
+            makeActive.each(function () {
+                if (active) {
+                    $(this).removeClass('inactive');
+                } else {
+                    $(this).addClass('inactive');
+                }
+            });
+        },
         initPageTopLine() {
             if (!$('#pageTopLine').length) return false;
 

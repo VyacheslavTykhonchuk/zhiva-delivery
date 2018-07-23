@@ -1,0 +1,109 @@
+@@include('modules/html-head.html',{ "bodyClass": "career-page body_career_page", "pageTitle": "Career page" }) @@include('modules/header.html',{
+"headerClass": "" })
+<div class="page-wrap">
+    <main class="page-main" id="main">
+        <header class="section-header wrap">
+            <section class="breadcrumbs breadcrumbs_padding">
+                <a href="" class="breadcrumbs__item">Главная</a>
+                <a href="" class="breadcrumbs__item">Контакты</a>
+            </section>
+        </header>
+        <section class="wrap">
+            <h2 class="section-title">
+                Контактная информация
+            </h2>
+            <section class="main-aside-columns">
+                <div class="main-aside-columns__main">
+                    <article class="title-text-block">
+                        <p class="title-text-block__text">Возникли вопросы, есть замечания или предложения, нужна квалифицированная консультация специалиста?
+                            Позвоните по телефону
+                            <a href="tel:+380506331217" class="link link_green link_inline">+38 (050) 633-12-17</a> или воспользуйтесь адресом электронной почты
+                            <a href="mailto:hr@zhiva.bz" class="link link_green link_inline">hr@zhiva.bz</a>. Эта страничка предусмотрена не только для общения с Вами, но и для возможности
+                            помочь Вам. Мы приложим максимум усилий, чтобы оперативно и в полном объеме Вам помочь.</p>
+                    </article>
+                    <div class="text-blocks">
+                        <div class="text-block text-blocks__item">
+                            <h4 class="text-block__heading">Отдел маркетинга</h4>
+
+                            <a href="tel:+380506331217" class="link link_gray text-block__item">
+                                +38 (050) 633-12-17
+                            </a>
+                            <a href="tel:+380506331217" class="link link_gray text-block__item">
+                                +38 (067) 633-12-17
+                            </a>
+                            <a href="mailto:marketing@zhiva.bz" class="link link_green text-block__item">marketing@zhiva.bz</a>
+                        </div>
+                        <div class="text-block text-blocks__item">
+                            <h4 class="text-block__heading">Отдел доставки</h4>
+
+                            <a href="tel:+380506331217" class="link link_gray text-block__item">
+                                +38 (050) 633-12-17
+                            </a>
+                            <a href="tel:+380506331217" class="link link_gray text-block__item">
+                                +38 (067) 633-12-17
+                            </a>
+                            <a href="mailto:shipment@zhiva.bz" class="link link_green text-block__item">shipment@zhiva.bz</a>
+                        </div>
+                    </div>
+                    <div class="text-blocks">
+                        <div class="text-block text-blocks__item">
+                            <h4 class="text-block__heading">Отдел по работе с поставщиками</h4>
+
+                            <a href="tel:+380506331217" class="link link_gray text-block__item">
+                                +38 (050) 633-12-17
+                            </a>
+                            <a href="tel:+380506331217" class="link link_gray text-block__item">
+                                +38 (067) 633-12-17
+                            </a>
+                            <a href="tel:+380506331217" class="link link_gray text-block__item">
+                                +38 (067) 633-12-17
+                            </a>
+                            <a href="mailto:info@zhiva.bz" class="link link_green text-block__item">info@zhiva.bz</a>
+                        </div>
+                        <div class="text-block text-blocks__item">
+                            <h4 class="text-block__heading">Отдел по работе с персоналом</h4>
+
+                            <a href="tel:+380506331217" class="link link_gray text-block__item">
+                                +38 (067) 633-12-17
+                            </a>
+                            <a href="mailto:info@zhiva.bz" class="link link_green text-block__item">info@zhiva.bz</a>
+                        </div>
+                    </div>
+                    <div class="text-blocks">
+                        <div class="text-block ">
+                            <h4 class="text-block__heading">А найти наc очень просто</h4>
+                            <span class="link link_gray text-block__item">
+                                ул. Полевая, 14, Ивано-Франковск, Украина, 76000
+                            </span>
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="main-aside-columns__aside">
+                    <div class="img-w-text img-w-text_contact">
+                        <div class="img-w-text__img-border">
+                            <img class="img-w-text__img" src="assets/img/supw.png" alt="">
+                        </div>
+                        <span class="img-w-text__text">
+                            Возникли вопросы, есть замечания или предложения, нужна квалифицированная консультация специалиста? Позвоните по телефону
+                            <a class="link link_green" href="tel:+38 (050) 663-12-17">+38 (050) 663-12-17</a>
+                        </span>
+                    </div>
+                </aside>
+            </section>
+
+        </section>
+    </main>
+</div>
+<script>
+    function initMap() {
+        var zhiva = { lat: 48.897401, lng: 24.7058768 };
+        var map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 15, center: zhiva });
+        var marker = new google.maps.Marker({ position: zhiva, map: map });
+    }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCbqjvLc-07qODM3YPEOa5b6Pe8D2BFbo&callback=initMap">
+</script> 
+@@include('modules/html-footer.html',{ "footerClass": "main-footer_border-top" })
