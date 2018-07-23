@@ -32,7 +32,7 @@
                     copyToClipboard($this.closest(parent).find(item));
                 });
             });
-            
+
             function copyToClipboard(element) {
                 var $temp = $("<input>");
                 $("body").append($temp);
@@ -154,14 +154,79 @@
             }
         },
         initSelects() {
-            if (!$('.customSelect').length) return false;
-            let select = $('.customSelect');
-            select.each(function () {
-                $(this).on('click', function () {
-                    $(this).toggleClass('main-select_opened');
-                });
-            });
+            if ((!$('.customSelect').length) && (!$('.openCustomSelect').length)) return false;
 
+            mainSelects();
+            customSelects();
+            function mainSelects() {
+                let select = $('.customSelect');
+                select.each(function () {
+                    $(this).on('click', function () {
+                        $(this).toggleClass('main-select_opened');
+                    });
+                });
+            }
+
+            function customSelects() {
+                let select = $('.openCustomSelect'),
+                    selectItem = $('.customSelectItem');
+
+                select.each(function () {
+                    $(this).on('click', function () {
+                        removeClass(makeActive, $(this));
+                    });
+                });
+
+                selectItem.each(function () {
+
+                    $(this).on('click', function () {
+                        let data = $(this).attr('data-val'),
+                            parent = $(this).closest('.openCustomSelect'),
+                            textSelected = parent.find('.customSelectSelected');
+
+                        chooseItem($(this), reinitText);
+
+                        if ($(this).attr('id') === 'newAdress') {
+                            activeNewAddress(true);
+                        } else {
+                            activeNewAddress(false);
+                        }
+
+                        function chooseItem($this, callback) {
+                            parent.attr('data-selected-val', data);
+                            callback();
+                        }
+                        function reinitText() {
+                            let parentData = parent.attr('data-selected-val');
+                            textSelected.text(parentData);
+                        }
+                    });
+                });
+
+                function removeClass(callback, $this) {
+                    select.each(function () {
+                        $(this).removeClass('active');
+                        $(this).find('.customSelectDropdown').removeClass('select-custom__dropdown_visible');
+                    });
+                    callback($this);
+                }
+
+                function makeActive($this) {
+                    $this.toggleClass('active');
+                    $this.find('.customSelectDropdown').toggleClass('select-custom__dropdown_visible');
+                }
+
+                function activeNewAddress(active) {
+                    let makeActive = $('.newAdressForm');
+                    makeActive.each(function () {
+                        if (active) {
+                            $(this).removeClass('inactive');
+                        } else {
+                            $(this).addClass('inactive');
+                        }
+                    });
+                }
+            }
         },
 
         initPageTopLine() {

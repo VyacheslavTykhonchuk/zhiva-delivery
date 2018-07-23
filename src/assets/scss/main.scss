@@ -739,6 +739,16 @@ input {
     font-size: 18px;
     font-weight: $light;
 
+    &-light {
+        font-weight: $light;
+        font-size: 16px;
+    }
+
+    &_medium {
+        font-size: 22px;
+        font-weight: $regular;
+    }
+
     &-small {
         display: inline;
 
@@ -2504,20 +2514,20 @@ input {
         }
     }
 }
-.heading{
+
+.heading {
     font: {
         size: 22px;
         weight: $regular;
     };
 }
+
 .two-blocks {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
     width: 100%;
     justify-content: space-between;
-
-    
 
     &__item {
         width: calc((100% / 2) - 20px );
@@ -2563,7 +2573,9 @@ input {
 }
 
 .location-block {
-    margin-top: 70px;
+    &_mt {
+        margin-top: 70px;
+    }
 
     &_no-m {
         margin-top: initial;
@@ -2582,9 +2594,10 @@ input {
     }
 }
 
-.selector-custom {
+.select-custom {
     width: 100%;
     position: relative;
+    z-index: 99;
     align-items: center;
     background: #f3f3f3;
     padding: 5px 14px;
@@ -2595,8 +2608,52 @@ input {
         radius: 3px;
     };
 
+    &.active {
+        z-index: 999;
+    }
+
+    &__dropdown {
+        position: absolute;
+        width: calc(100% + 2px);
+        left: -1px;
+        bottom: 0;
+        transform: translate(0, 100%);
+        background: #f3f3f3;
+        padding-top: 8px;
+        transition: all 0.4s;
+        border: 1px solid $lightGray {
+            radius: 3px;
+            top: none {
+                left-radius: 0px;
+                right-radius: 0px;
+            };
+        };
+
+        //
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        &_visible {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    &__item {
+        padding: 5px 14px;
+        color: hsl(0, 0%, 40%);
+        transition: all 0.4s;
+
+        &:hover {
+            background: hsl(0, 0%, 90%);
+        }
+    }
+
     &__choosen {
         color: hsl(0, 0%, 40%);
+        user-select: none;
         font: {
             size: 16px;
             weight: $regular;
@@ -2689,6 +2746,10 @@ input {
         radius: 3px;
     };
 
+    &_ta {
+        resize: none;
+    }
+
     &::placeholder {
         opacity: .5;
     }
@@ -2696,7 +2757,8 @@ input {
     & + *:not(.common-input) {
         margin-left: 8px;
     }
-    &+.common-input{
+
+    & + .common-input {
         margin-top: 16px;
     }
 
@@ -2722,4 +2784,42 @@ input {
             margin-top: 12px;
         }
     }
+}
+
+.w100 {
+    width: 100%;
+}
+
+.delivery-time {
+    display: flex;
+    flex-direction: column;
+
+    .location-block {
+        margin-top: 8px;
+
+        .location-block__text + * {
+            margin-top: 8px !important;
+            margin-left: 0;
+        }
+    }
+
+    .text {
+        &-light {}
+
+        &_medium {
+            margin: {
+                top: 8px;
+                left: 6px;
+            };
+
+            & + * {
+                margin-top: 23px;
+            }
+        }
+    }
+}
+
+.inactive {
+    opacity: .5;
+    pointer-events: none;
 }
