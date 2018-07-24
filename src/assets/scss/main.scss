@@ -3335,3 +3335,13 @@ input {
     align-items: center;
     justify-content: center;
 }
+
+.reset-pass-page {
+    .hint {
+        max-width: 400px;
+
+        & + * {
+            margin-top: 12px;
+        }
+    }
+}
