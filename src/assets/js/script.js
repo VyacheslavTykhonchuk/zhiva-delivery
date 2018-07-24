@@ -22,6 +22,17 @@
             zhiva.activeNewAddress();
             zhiva.activeCheckoutBonuses();
             zhiva.initBonusesVisibility();
+            zhiva.initUserDropDown();
+
+        },
+        initUserDropDown() {
+            const openDropdown = $('.openUserDropdown'),
+                dropdown = $('.userDropdown');
+            openDropdown.on('click', function (e) {
+                e.preventDefault();
+                dropdown.toggleClass('active');
+            });
+            
         },
         initBonusesVisibility(status) {
             let block = $('.bonusBlock');
