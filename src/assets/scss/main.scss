@@ -3322,3 +3322,17 @@ input {
         }
     }
 }
+
+.green-counter {
+    font: {
+        size: 11px;
+        weight: $bold;
+    };
+    padding: 1px 5px;
+    background: $green;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 100%;
+}
