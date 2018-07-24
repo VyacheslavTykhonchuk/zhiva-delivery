@@ -2937,6 +2937,35 @@ input {
     flex-direction: column;
     padding-top: 50px;
 
+    &_w-border {
+        .profile-info__heading {
+            & + * {
+                border-top: 1px solid $lightGray;
+                padding-top: 13px;
+            }
+        }
+
+        .profile-info__item {
+            &_fill-available {
+                width: 66%;
+            }
+
+            &_right {
+                font: {
+                    size: 16px;
+                    weight: $light;
+                };
+            }
+
+            &_left {
+                font: {
+                    size: 16px;
+                    weight: $regular;
+                };
+            }
+        }
+    }
+
     &__heading {
         margin: 0;
         padding-left: 5px;
@@ -2994,9 +3023,11 @@ input {
         border-top: 1px solid $lightGray;
         padding-top: 12px;
         padding-left: 5px;
-        svg{
-            margin-right:10px;
+
+        svg {
+            margin-right: 10px;
         }
+
         > * + * {
             margin-left: 30px;
         }
@@ -3005,4 +3036,154 @@ input {
 
 .profile-footer {
     margin-top: 100px;
+}
+
+.transactions-page {
+    .main-table__heading {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        padding: 0 14px;
+    }
+
+    .pagination {
+        justify-content: flex-start;
+    }
+}
+
+.data-filter {
+    display: flex;
+    align-items: baseline;
+    color: $darkGray;
+    font: {
+        size: 18px;
+        weight: $regular;
+    };
+
+    > * + * {
+        margin-left: 8px;
+    }
+}
+
+.card-date {
+    display: flex;
+
+    .select-custom {
+        min-height: 33px;
+        width: 92px;
+
+        & + * {
+            margin-left: 12px;
+        }
+    }
+}
+
+.checkout-card-info {
+    .profile-info__item {
+        &_left {
+            .profile-info__text {
+                & + * {
+                    margin-top: 22px;
+                }
+            }
+        }
+
+        &_right {
+            .profile-info__text {
+                & + * {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}
+
+.payment-page {
+    .main-header {
+        &__top-line {
+            height: 25px;
+        }
+
+        &__main-content {
+            width: 100%;
+        }
+    }
+
+    .two-columns {
+        & + * {
+            margin-top: 30px;
+        }
+    }
+
+    .link_arrow {
+        margin-top: 50px;
+    }
+
+    .two-columns__item:last-child {
+        align-items: flex-end;
+        display: flex;
+        padding-left: 30px;
+        padding-bottom: 46px;
+    }
+}
+
+.checkout-card-info {
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+}
+
+.card-name {
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+        color: $green;
+    }
+
+    &.active {
+        color: $green;
+    }
+
+    & + * {
+        margin-left: 12px;
+    }
+}
+
+.hint {
+    margin-top: 14px;
+    color: $darkGray;
+    max-width: 575px;
+    display: inline-block;
+    font: {
+        size: 14px;
+        weight: $light;
+    };
+}
+
+.card-holders {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: max-content;
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > * + * {
+            margin-left: 22px;
+            margin-top: 8px;
+        }
+    }
+
+    &__hint {
+        margin-top: 0;
+    }
 }
