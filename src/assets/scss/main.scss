@@ -2642,6 +2642,13 @@ input {
 
     &.active {
         z-index: 999;
+
+        .select-custom__arr {
+            &::after {
+                transform: rotate(225deg) translate(0, 0);
+                top: 6px;
+            }
+        }
     }
 
     &__dropdown {
@@ -2652,6 +2659,8 @@ input {
         transform: translate(0, 100%);
         background: #f3f3f3;
         padding-top: 8px;
+        max-height: 154px;
+        overflow: scroll;
         transition: all 0.4s;
         border: 1px solid $lightGray {
             radius: 3px;
@@ -2701,6 +2710,7 @@ input {
         flex-direction: column;
         right: 30px;
         top: 7px;
+        transition: all 0.3s;
 
         &::after {
             content: '';
@@ -2709,9 +2719,10 @@ input {
             height: 5px;
             border-right: 1px solid hsl(0, 0%, 40%);
             border-bottom: 1px solid hsl(0, 0%, 40%);
-            transform: rotate(45deg);
+            transform: rotate(45deg) translate(0, 0);
             left: 10px;
             top: 3px;
+            transition: all 0.3s;
         }
     }
 }
@@ -3100,6 +3111,14 @@ input {
 }
 
 .payment-page {
+    .main-footer__content {
+        align-items: center;
+    }
+
+    .main-footer__bottom {
+        padding-top: 15px;
+    }
+
     .main-header {
         &__top-line {
             height: 25px;
@@ -3107,6 +3126,7 @@ input {
 
         &__main-content {
             width: 100%;
+            justify-content: space-between;
         }
     }
 
@@ -3185,5 +3205,31 @@ input {
 
     &__hint {
         margin-top: 0;
+    }
+}
+
+.country-flags {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        display: flex;
+        width: 20px;
+        height: 14px;
+        border: 1px solid #01358c;
+
+        & + * {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            border: 1px solid  red;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

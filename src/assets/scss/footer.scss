@@ -4,9 +4,9 @@
 
     &_border-top {
         margin-top: 95px;
+
         .main-footer-top {
             border-top: 1px solid $lightGray;
-
         }
     }
 
@@ -28,6 +28,10 @@
     &__copyright {
         font-weight: $light;
         font-size: 14px;
+
+        > span + span {
+            margin-left: 45px;
+        }
     }
 }
 
