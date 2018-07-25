@@ -4,6 +4,36 @@
     border-bottom: 1px solid rgb(229, 229, 229);
     position: relative;
 
+    .bucket-full {
+        display: none;
+    }
+
+    .bucket-empty {
+        display: flex;
+    }
+
+    &.bucketIs {
+        &Empty {
+            .bucket-full {
+                display: none !important;
+            }
+
+            .bucket-empty {
+                display: flex !important;
+            }
+        }
+
+        &Full {
+            .bucket-full {
+                display: flex !important;
+            }
+
+            .bucket-empty {
+                display: none !important;
+            }
+        }
+    }
+
     &__top-line {
         display: flex;
         background: $green;

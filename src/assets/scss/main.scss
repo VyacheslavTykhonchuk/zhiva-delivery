@@ -220,6 +220,10 @@ input {
     }
 }
 
+.bucket-full {
+    min-width: 169px;
+}
+
 .main {
     &-dropdown {
         display: flex;
@@ -357,7 +361,7 @@ input {
         align-items: center;
 
         > * + * {
-            margin-left: 35px;
+            margin-left: 20px;
         }
 
         &__icon {
