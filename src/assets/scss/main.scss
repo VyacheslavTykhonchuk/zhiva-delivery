@@ -67,6 +67,7 @@ input {
     transition: all 0.4s;
     box-shadow: -10px 14px 15px -9px grey;
     width: 100%;
+    padding-left: 30px;
 
     //
     opacity: 0;
@@ -885,6 +886,7 @@ input {
 
     &_add {
         padding: 10px 12px 10px 12px;
+        min-width: 72px;
 
         > * + * {
             margin-left: 10px;
