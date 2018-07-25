@@ -61,7 +61,7 @@ input {
     flex-direction: column;
     border-top: 1px solid hsl(0, 0%, 90%);
     position: absolute;
-    z-index: 9;
+    z-index: 999;
     bottom: 0;
     transform: translate(0, 100%);
     transition: all 0.4s;
@@ -2346,6 +2346,41 @@ input {
 }
 
 .main-list {
+    &__decimal-custom {
+        counter-reset: list-item;
+        padding-left: 66px;
+        margin-top: 40px;
+        list-style: none;
+
+        .main-list__item {
+            position: relative;
+            line-height: 1.5;
+            & + * {
+                margin-top: 30px;
+            }
+
+            &::before {
+                content: counter(list-item);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: $green;
+                position: absolute;
+                left: -20px;
+                top: -10px;
+                transform: translate(-100%, 0);
+                font: {
+                    size: 28px;
+                    weight: $bold;
+                };
+            }
+        }
+    }
+
     &_bullet {
         padding-left: 1rem;
     }
@@ -3216,6 +3251,13 @@ input {
         size: 14px;
         weight: $light;
     };
+
+    &_border-block {
+        border-top: 1px solid $lightGray;
+        max-width: initial;
+        padding: 50px 150px 50px 70px;
+        font-size: 12px;
+    }
 
     &_wide {
         max-width: 820px;
