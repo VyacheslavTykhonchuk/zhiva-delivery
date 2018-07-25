@@ -114,10 +114,14 @@ input {
     }
 }
 
+.counterQuantity {
+    pointer-events: none;
+}
+
 .product {
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
+    padding-left: 50px;
     margin-top: 50px;
     width: 100%;
 
@@ -128,6 +132,7 @@ input {
     &__title {
         font-size: 18px;
         font-weight: $regular;
+        position: relative;
 
         & + * {
             margin-top: 12px;
@@ -140,6 +145,21 @@ input {
 
         & + * {
             margin-top: 8px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        transform: translate(-100%, 0);
+        left: -10px;
+
+        img {
+            width: 32px;
+            height: 32px;
+            opacity: 0.5;
         }
     }
 
@@ -2345,6 +2365,24 @@ input {
     flex-direction: column;
 }
 
+.fdc {
+    flex-direction: column;
+}
+
+.fdr {
+    flex-direction: row;
+}
+
+.aic {
+    align-items: center;
+}
+
+.bucket-empty-msg {
+    font-size: 10px;
+    width: 120px;
+    padding-left: 10px;
+}
+
 .main-list {
     &__decimal-custom {
         counter-reset: list-item;
@@ -2355,6 +2393,7 @@ input {
         .main-list__item {
             position: relative;
             line-height: 1.5;
+
             & + * {
                 margin-top: 30px;
             }
@@ -2813,8 +2852,14 @@ input {
     }
 }
 
-.no-mt {
-    margin-top: 0 !important;
+.no {
+    &-mt {
+        margin-top: 0 !important;
+    }
+
+    &-ml {
+        margin-left: 0 !important;
+    }
 }
 
 .cash {

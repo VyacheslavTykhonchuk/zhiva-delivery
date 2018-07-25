@@ -53,6 +53,7 @@
     &__img {
         object-fit: cover;
         border: 1px solid $lightGray;
+        user-select: none;
     }
 
     &__img-holder {

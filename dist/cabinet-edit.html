@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Thanks page</title>
+    <title>Login page</title>
 </head>
 
-<body class="checkout-thanks-page body_checkout-thanks"> <div class="page-top-line" id="pageTopLine">
+<body class="login-page body_login_page"> <div class="page-top-line" id="pageTopLine">
     <span>Доставка продукції на Буковель проводиться в понеділок, середу,</span>
     <div class="page-top-line__close" id="closePageTopLine">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="15px">
@@ -1030,41 +1030,38 @@
         <header class="section-header wrap">
             <section class="breadcrumbs breadcrumbs_padding">
                 <a href="" class="breadcrumbs__item">Главная</a>
-                <a href="" class="breadcrumbs__item">Спасибо</a>
+                <a href="" class="breadcrumbs__item">Личный кабинет</a>
+                <a href="" class="breadcrumbs__item">Редактирование личных данных</a>
             </section>
         </header>
-        <section class=" wrap">
-            <header class="section-header-title section-header-title_ref">
-                <div class="section-title">
-                    Спасибо, ваш заказ №551401 отправлен в обработку. Заказ будет доставлен в понедельник 12 августа в 15:00.
+        <section class="support__main wrap">
+
+            <h2 class="section-title">
+                Редактирование личных данных
+            </h2>
+            <form action="" class="main-form">
+                <div class="main-form-input__wrap">
+                    <input type="text" placeholder="Ваше имя" name="editName" class="main-form-input">
                 </div>
-            </header>
-            <div class="text">В ближайшее время Вам перезвонит менеджер и согласует все вопросы по заказу. Введите свой почтовый адрес, нажмите
-                кнопку “Отправить” и мы вышлем подтверждение вашего заказа.</div>
-            <footer class="main-form__footer">
-                <form action="" class="main-subscribe">
-                    <input class="main-subscribe__input" type="email" placeholder="Введите ваш почтовый адрес" name="" id="">
-                    <input class="main-subscribe__submit btn_green btn" type="submit" value="Отправить">
-                </form>
-                <div class="arrow-links">
+                <div class="main-form-input__wrap">
+                    <input type="text" placeholder="E-mail" name="editEmail" class="main-form-input">
+                </div>
+                <div class="main-form-input__wrap">
+                    <input type="text" placeholder="+38 (050) 633-12-17" name="editTel" class="main-form-input">
+                </div>
+                <footer class="main-form__footer fdr aic">
+                    <input type="submit" class=" btn_green btn btn_submit" value="Сохранить">
+
                     <a href="" class="link link_green link_arrow link_medium">
                         <div class="link__arrow-icon link__arrow-icon_green link__arrow-icon_back">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="12px">
                                 <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M0.126,7.016 L7.711,7.016 L3.362,11.084 L6.437,11.084 L11.873,5.999 L6.437,0.915 L3.362,0.915 L7.711,4.983 L0.126,4.983 L0.126,7.016 Z"></path>
                             </svg>
                         </div>
-                        <span>Продолжить покупки</span>
+                        <span>Отменить</span>
                     </a>
-                    <a href="" class="link link_green link_medium link_arrow">
-                        <span>Войти в личный кабинет</span>
-                        <div class="link__arrow-icon link__arrow-icon_green">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="12px">
-                                <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M0.126,7.016 L7.711,7.016 L3.362,11.084 L6.437,11.084 L11.873,5.999 L6.437,0.915 L3.362,0.915 L7.711,4.983 L0.126,4.983 L0.126,7.016 Z"></path>
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-            </footer>
+                </footer>
+            </form>
         </section>
     </main>
 </div>

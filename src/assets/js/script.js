@@ -23,8 +23,60 @@
             zhiva.activeCheckoutBonuses();
             zhiva.initBonusesVisibility();
             zhiva.initUserDropDown();
-
+            zhiva.initHeaderBucket();
         },
+        initHeaderBucket() {
+            let quantity = $('#headerBucketQuantity'),
+                price = $('#headerBucketPrice'),
+                addQ = $('.addQuantity'),
+                removeQ = $('.removeQuantity'),
+                addItem = $('.addDisplaying');
+
+            addItem.on('click', function () {
+                let itemPrice = $(this).closest('.quantityVisibility').find('.productPrice').attr('data-product-price');
+                increaseBucketSize(itemPrice);
+            });
+
+            addQ.on('click', function () {
+                let itemPrice = $(this).closest('.quantityVisibility').find('.productPrice').attr('data-product-price');
+                increaseBucketSize(itemPrice);
+            });
+
+            removeQ.on('click', function () {
+                let itemPrice = $(this).closest('.quantityVisibility').find('.productPrice').attr('data-product-price');
+                decreaseBucketSize(itemPrice);
+            });
+
+            function increaseBucketSize(num, callback) {
+                let currPrice = price.attr('data-price'),
+                    currQuantity = quantity.attr('data-quantity'),
+                    newPrice = 0,
+                    newQuantity = 0;
+
+                newPrice = +currPrice + (+num);
+                newQuantity = +currQuantity + 1;
+
+                price.attr('data-price', newPrice);
+                quantity.attr('data-quantity', newQuantity);
+
+                callback();
+            }
+            function decreaseBucketSize(num, callback) {
+                let currPrice = price.attr('data-price'),
+                    currQuantity = quantity.attr('data-quantity'),
+                    newPrice = 0,
+                    newQuantity = 0;
+
+                newPrice = +currPrice - (+num);
+                newQuantity = +currQuantity - 1;
+
+                price.attr('data-price', newPrice);
+                quantity.attr('data-quantity', newQuantity);
+
+                callback();
+            }
+        },
+
         initUserDropDown() {
             const openDropdown = $('.openUserDropdown'),
                 dropdown = $('.userDropdown');
@@ -334,12 +386,29 @@
             });
         },
         initOpenMenu() {
+            if (!$('#openMenu').length) return false;
+
             let openMenu = $('#openMenu'),
                 menu = $('#mainMenu');
             openMenu.on('click', function (e) {
                 e.preventDefault();
                 menu.toggleClass('visible');
+                e.stopPropagation();
+
             });
+            openMenu.on('mouseover', function () {
+                setTimeout(() => {
+                    menu.addClass('visible');
+                }, 300);
+            });
+            $(document).on('click', function (e) {
+                let thisEl = document.getElementById('mainMenu'),
+                    target = e.target;
+                if (target != thisEl) {
+                    menu.removeClass('visible');
+                }
+            });
+
 
         },
         initQuantityItems() {
