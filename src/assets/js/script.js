@@ -24,6 +24,27 @@
             zhiva.initBonusesVisibility();
             zhiva.initUserDropDown();
             zhiva.initHeaderBucket();
+            zhiva.initMobileMenu();
+        },
+        initMobileMenu() {
+            let mobileMenu = $('#mobileMainMenu'),
+                closeMobile = $('.closeMobileMenu'),
+                openMenu = $('.openMobileMenu'),
+                openMenuItem = mobileMenu.find('.main-menu-mobile__item');
+
+            closeMobile.on('click', function () {
+                mobileMenu.removeClass('opened');
+            });
+
+            openMenu.on('click', function () {
+                mobileMenu.addClass('opened');
+            });
+
+            openMenuItem.each(function () {
+                $(this).on('click', function () {
+                    $(this).toggleClass('opened');
+                });
+            });
         },
         initHeaderBucket() {
             let quantity = $('#headerBucketQuantity'),
@@ -396,6 +417,10 @@
                 setTimeout(() => {
                     $(this).closest(line).hide();
                 }, 400);
+                if (zhiva.winWidth < 430) {
+                    $('body').addClass('mobileNoLine');
+                    $('#mainHeader').addClass('mobileNoLine');
+                }
             });
         },
         initOpenMenu() {
@@ -471,16 +496,32 @@
             }
         },
         initSlider() {
-            // call 
+            // calls
             plateSlider();
-            homeSlide();
             reviewSlider();
             productSliders();
+            if (zhiva.winWidth > 500) {
+                homeSlide();
+            } else {
+                mobileHomeSlider();
+            }
+            // calls end
+
+            function mobileHomeSlider() {
+                let mobileSlider = $('.main-home-block.wrap');
+                mobileSlider.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    draggable: true,
+                    variableWidth: true,
+                    autoplay: true,
+                });
+            }
             function productSliders() {
                 if (!$('.productSliderMain').length) return false;
                 let sMain = $('.productSliderMain'),
                     sNav = $('.productSliderNav');
-
 
                 sMain.slick({
                     slidesToShow: 1,
@@ -548,6 +589,14 @@
                             breakpoint: 1025,
                             settings: {
                                 slidesToShow: 3,
+                                slidesToScroll: 1,
+                                infinite: true,
+                            }
+                        },
+                        {
+                            breakpoint: 500,
+                            settings: {
+                                slidesToShow: 1.1,
                                 slidesToScroll: 1,
                                 infinite: true,
                             }

@@ -1,5 +1,15 @@
 body {
     font-family: $mainFont;
+
+    @media (max-width: 430px) {
+        max-width: 100vw;
+        overflow-x: hidden;
+        padding-top: 70px + 50px;
+        transition: all.4s;
+    }
+    &.mobileNoLine{
+        padding-top: 70px;
+    }
 }
 
 * {
@@ -72,6 +82,10 @@ input {
     //
     opacity: 0;
     visibility: hidden;
+
+    @media (max-width: 430px) {
+        display: none;
+    }
 
     &.visible {
         opacity: 1;
@@ -202,8 +216,20 @@ input {
     position: relative;
     transition: all 0.4s;
 
+    @media (max-width: 430px) {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        z-index: 999;
+    }
+
     &.hidden {
         margin-top: -41px;
+
+        @media (max-width: 430px) {
+            margin-top: -50px;
+        }
     }
 
     &__close {
@@ -217,7 +243,13 @@ input {
     }
 
     span {
+        max-width: 83%;
+        text-align: center;
         color: $green;
+
+        @media (max-width: 430px) {
+            font-size: 12px;
+        }
     }
 }
 
@@ -421,6 +453,11 @@ input {
             height: 25px;
             border: 1px solid $green;
 
+            @media (max-width: 430px) {
+                width: 32px;
+                height: 32px;
+            }
+
             svg {
                 transform: translate3d(0, 0, 0);
             }
@@ -439,6 +476,23 @@ input {
         justify-content: space-between;
         margin-top: 12px;
 
+        @media (max-width: 430px) {
+            margin-top: -12px;
+
+            &.slick-slider {
+                padding: 0 !important;
+
+                .slick-track {
+                    display: flex;
+                    align-items: flex-end;
+
+                    .slick-slide {
+                        max-width: 100vw;
+                    }
+                }
+            }
+        }
+
         &__item {
             border: 1px solid rgb(229, 229, 229);
             border-radius: 4px;
@@ -450,6 +504,21 @@ input {
             position: relative;
             overflow: hidden;
             transition: all 0.4s;
+
+            @media (max-width: 430px) {
+                height: 160px;
+                border: none {
+                    radius: 0;
+                };
+
+                // &:not(.mobile-home-block) {
+                //     display: none !important;
+                // }
+
+                &.mobile-home-block {
+                    margin-top: -12px !important;
+                }
+            }
 
             &_link {
                 &:hover {
@@ -469,6 +538,12 @@ input {
                 width: calc((100% / 3) - 6px);
                 display: flex;
                 flex-direction: column;
+
+                @media (max-width: 430px) {
+                    & + * {
+                        margin-left: 1rem;
+                    }
+                }
 
                 .main-home-block__item {
                     height: 100%;
@@ -620,6 +695,12 @@ input {
         cursor: pointer;
         transition: all 0.4s;
 
+        @media (max-width: 430px) {
+            width: 8px;
+            height: 8px;
+            border-width: 1px;
+        }
+
         &.slick-active {
             background: white;
         }
@@ -635,6 +716,12 @@ input {
 
     button {
         display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .mobile-hide {
+        display: none !important;
     }
 }
 
@@ -942,6 +1029,26 @@ input {
     font-family: $mainFont;
     position: relative;
 
+    @media (max-width: 430px) {
+        margin-top: 24px;
+
+        .slick-track {
+            left: 36px;
+
+            @media (max-width: 380px) {
+                left: 31px;
+
+                @media (max-width: 330px) {
+                    left: 26px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 430px) {
+        padding: 0 1rem;
+    }
+
     &.wrap {
         .custom-arrow__prev {
             left: -45px;
@@ -953,6 +1060,10 @@ input {
     }
 
     &__buy {
+        @media (max-width: 430px) {
+            min-height: 39px;
+        }
+
         &:hover {
             svg {
                 &:first-child {
@@ -983,10 +1094,22 @@ input {
         right: 15px;
         padding: 5px 14px;
         border-radius: 15px;
+
+        @media (max-width: 430px) {
+            padding: 2px 14px;
+            font-size: 13px;
+            right: initial;
+            left: 50%;
+            transform: translate(-28%, 0);
+        }
     }
 
     > * + * {
         margin-top: 20px;
+
+        @media (max-width: 430px) {
+            margin-top: 6px;
+        }
     }
 
     &__title {
@@ -994,6 +1117,10 @@ input {
         color: $darkGray;
         margin: 0;
         font-weight: $regular;
+
+        @media (max-width: 430px) {
+            font-size: 16px;
+        }
     }
 
     &__wrap {
@@ -1008,6 +1135,12 @@ input {
         img {
             width: 100%;
             height: 100%;
+
+            @media (max-width: 430px) {
+                width: 70px;
+                height: 70px;
+                object-fit: contain;
+            }
         }
 
         & + * {
@@ -1023,6 +1156,10 @@ input {
         font-weight: $light;
         transition: all 0.4s;
 
+        @media (max-width: 430px) {
+            padding-top: 13px;
+        }
+
         & + * {
             margin-top: 8px;
         }
@@ -1035,6 +1172,10 @@ input {
         line-height: 1.2;
         font-weight: $light;
 
+        @media (max-width: 430px) {
+            display: none;
+        }
+
         & + * {
             margin-top: 8px;
         }
@@ -1043,6 +1184,10 @@ input {
     &__price {
         display: flex;
         align-items: center;
+
+        @media (max-width: 430px) {
+            align-items: baseline;
+        }
 
         > * + * {
             margin-left: 5px;
@@ -1054,11 +1199,19 @@ input {
             &:first-child {
                 font-weight: $bold;
                 font-size: 18px;
+
+                @media (max-width: 430px) {
+                    font-size: 24px;
+                }
             }
 
             &:last-child {
                 font-weight: $light;
                 font-size: 12px;
+
+                @media (max-width: 430px) {
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -1068,6 +1221,14 @@ input {
         width: 100%;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 430px) {
+            position: absolute;
+            bottom: 18px;
+            width: calc(100% - 32px);
+            left: 16px;
+            align-items: flex-end;
+        }
 
         span {
             white-space: nowrap;
@@ -1110,6 +1271,12 @@ input {
         transition: all 0.4s;
         position: relative;
         overflow: hidden;
+
+        @media (max-width: 430px) {
+            flex-direction: row;
+            height: 150px;
+            align-items: flex-start;
+        }
 
         & + * {
             margin-left: 12px;
@@ -1250,6 +1417,18 @@ input {
     overflow: hidden;
     min-height: 250px;
 
+    @media (max-width: 430px) {
+        width: 100%;
+
+        &:not(.mobile-info-block) {
+            display: none !important;
+        }
+    }
+
+    & + * {
+        margin-top: 1rem;
+    }
+
     &_video {
         background-repeat: no-repeat;
         background-size: contain;
@@ -1290,6 +1469,10 @@ input {
         padding: 45px;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 430px) {
+            flex-direction: column;
+        }
     }
 
     &__text-wrap {
@@ -1346,6 +1529,10 @@ input {
     flex-wrap: wrap;
     margin-top: 40px;
 
+    @media (max-width: 430px) {
+        display: none;
+    }
+
     &__item {
         min-height: 160px;
         border-radius: 4px;
@@ -1357,6 +1544,10 @@ input {
         margin: 8px;
         overflow: hidden;
         transition: all 0.4s;
+
+        @media (max-width: 430px) {
+            width: 100%;
+        }
 
         &:hover {
             border-color: $green;
@@ -1401,8 +1592,19 @@ input {
     padding: 75px 0;
     width: 100%;
 
+    @media (max-width: 430px) {
+        padding: 1rem {
+            bottom: 2rem;
+        };
+    }
+
     &__title {
         font-size: 32px;
+
+        @media (max-width: 430px) {
+            text-align: center;
+            font-size: 18px;
+        }
     }
 
     &__slider {
@@ -1413,6 +1615,10 @@ input {
 
         .slick-dots {
             bottom: -40px;
+
+            @media (max-width: 430px) {
+                bottom: -14px;
+            }
         }
 
         &-item {
@@ -1422,6 +1628,10 @@ input {
             align-items: center;
             max-width: 870px;
             margin: 0 auto;
+
+            @media (max-width: 430px) {
+                padding: 1rem;
+            }
         }
 
         &-img {
@@ -1438,6 +1648,10 @@ input {
             text-align: center;
             line-height: 1.556;
 
+            @media (max-width: 430px) {
+                font-size: 12px;
+            }
+
             & + * {
                 margin-top: 16px;
             }
@@ -1447,6 +1661,10 @@ input {
             font-size: 20px;
             font-weight: $regular;
             text-align: center;
+
+            @media (max-width: 430px) {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -1455,6 +1673,12 @@ input {
     display: flex;
     flex-direction: column;
     padding: 45px 0;
+
+    @media (max-width: 430px) {
+        &.wrap {
+            display: none;
+        }
+    }
 
     &__title {
         font-size: 32px;
@@ -1512,6 +1736,11 @@ input {
         justify-content: center;
         font-size: 12px;
 
+        @media (max-width: 430px) {
+            width: 32px;
+            height: 32px;
+        }
+
         @include circleHover($green);
 
         &_active {
@@ -1529,8 +1758,18 @@ input {
     display: flex;
     align-items: center;
 
+    @media (max-width: 430px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     > * + * {
         margin-left: 6px;
+
+        @media (max-width: 430px) {
+            margin-top: 1rem;
+            margin-left: 0;
+        }
     }
 
     &__input {
@@ -1540,6 +1779,10 @@ input {
         width: 100%;
         font-size: 14px;
         border-radius: 4px;
+
+        @media (max-width: 430px) {
+            font-size: 16px;
+        }
     }
 
     &__submit {
@@ -3436,5 +3679,19 @@ input {
         & + * {
             margin-top: 12px;
         }
+    }
+}
+
+@media (max-width: 430px) {
+    .main-home-block__item_wide.main-slider {
+        display: none;
+    }
+}
+
+.icon {
+    &-oil {
+        min-width: 85px;
+        height: 35px;
+        object-fit: contain;
     }
 }
