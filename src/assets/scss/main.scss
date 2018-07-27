@@ -4129,21 +4129,6 @@ input {
             }
         }
 
-        .product-properties {
-            flex-direction: column;
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 1rem;
-
-            &__wrap {
-                width: 100%;
-
-                & + * {
-                    margin-top: 8px;
-                }
-            }
-        }
-
         .main-text-block {
             &__title {
                 display: none;
@@ -4152,6 +4137,23 @@ input {
             &__text {
                 margin-top: 0 !important;
                 font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1030px) {
+    .product-properties {
+        flex-direction: column;
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+
+        &__wrap {
+            width: 100% !important;
+
+            & + * {
+                margin-top: 8px;
             }
         }
     }
