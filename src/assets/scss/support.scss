@@ -61,6 +61,10 @@
             margin-bottom: 0;
             width: max-content;
 
+            @media (max-width: 430px) {
+                display: inline;
+            }
+
             @include underlineHover($green);
 
             & + * {
